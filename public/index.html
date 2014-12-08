@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Node App</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
-	<script src="../bower_components/angularjs/angular.min.js"></script>
+	<script src="framework/angular.min.js"></script>
+	<script src="framework/angular-route.min.js"></script>
 </head>
 <body>
 	<div ng-controller="HomeController">
@@ -13,5 +14,8 @@
 			Hit Me
 		</button>
 	</div>
+
+	<script src="javascripts/services.js"></script>
+	<script src="javascripts/index.js"></script>
 </body>
 </html>

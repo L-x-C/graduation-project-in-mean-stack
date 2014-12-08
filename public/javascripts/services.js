@@ -5,12 +5,12 @@
 */
 angular.module('myApp.services', [])
 	.factory('HitService',  function($q, $http){
-		vra service = {
+		var service = {
 			count: function() {
 				var d = $q.defer();
 				$http.get('/hits')
 					.success(function(data, status) {
-						d.resole(data.hits);
+						d.resolve(data.hits);
 					})
 					.error(function(data, status) {
 						d.reject(data);
@@ -19,7 +19,7 @@ angular.module('myApp.services', [])
 			},
 			registerHit: function() {
 				var d = $q.defer();
-				$http.post('/hit', {})
+				$http.post('/hits', {})
 					.success(function(data, status) {
 						d.resolve(data.hits)
 					})
