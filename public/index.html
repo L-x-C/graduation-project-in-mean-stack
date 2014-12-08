@@ -7,6 +7,11 @@
 	<script src="../bower_components/angularjs/angular.min.js"></script>
 </head>
 <body>
-	<h1>hello world</h1>
+	<div ng-controller="HomeController">
+		<h3>Button hits: {{hits}}</h3>
+		<button ng-click="registerHit()">
+			Hit Me
+		</button>
+	</div>
 </body>
 </html>
