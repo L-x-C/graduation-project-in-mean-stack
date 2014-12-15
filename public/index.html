@@ -9,10 +9,14 @@
 </head>
 <body>
 	<div ng-controller="HomeController">
-		<h3>Button hits: {{hits}}</h3>
+		<h3>data: {{hits}}</h3>
 		<button ng-click="registerHit()">
-			Hit Me
+			Read
 		</button>
+		<form name='myform' ng-submit="saveHit()">
+			<input type="text" ng-model="fuckingData">
+			<input type="submit" value="save">
+		</form>
 	</div>
 
 	<script src="javascripts/services.js"></script>

@@ -12,7 +12,14 @@ angular.module('myApp', ['ngRoute','myApp.services'])
 		$scope.registerHit = function() {
 			HitService.registerHit()
 				.then(function(data){
+					console.log(data);
 					$scope.hits = data;
 				}); 
+		}
+		$scope.saveHit = function() {
+			HitService.saveHit(this.fuckingData)
+				.then(function(data){
+					$scope.fuckingData = data;
+				});
 		}
 	});
