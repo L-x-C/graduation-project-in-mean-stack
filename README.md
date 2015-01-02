@@ -1,5 +1,6 @@
 graduation-project
 ==================
+##To be continued...
 ##Install
  - Clone / Download
  - Change to project's root directory
