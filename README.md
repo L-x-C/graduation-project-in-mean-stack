@@ -2,6 +2,6 @@ graduation-project
 ==================
 
 ##Install
-1. clone / download
-2. cd ./graduation-project
-'npm install'
+1. Clone / Download
+2. Change to project's root directory.
+    npm install
