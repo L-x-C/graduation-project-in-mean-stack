@@ -15,13 +15,13 @@ myApp.controller('HomeController', function($scope, HitService){
 					console.log(data);
 					$scope.hits = data;
 				}); 
-		}
+		};
 		$scope.saveHit = function() {
 			HitService.saveHit(this.fuckingData)
 				.then(function(data){
 					$scope.fuckingData = data;
 				});
-		}
+		};
 	});
 myApp.controller('AppCtrl', function($scope) {
   $scope.title1 = 'Button';

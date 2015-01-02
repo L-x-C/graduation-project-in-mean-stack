@@ -15,13 +15,13 @@ myApp.controller('HomeController', function($scope, HitService){
 					console.log(data);
 					$scope.hits = data;
 				}); 
-		}
+		};
 		$scope.saveHit = function() {
 			HitService.saveHit(this.fuckingData)
 				.then(function(data){
 					$scope.fuckingData = data;
 				});
-		}
+		};
 	});
 myApp.controller('AppCtrl', function($scope) {
   $scope.title1 = 'Button';
@@ -53,7 +53,7 @@ angular.module('myApp.services', [])
 				$http.post('/hits', {})
 					.success(function(data, status) {
 						console.log('feS', data, status);
-						d.resolve(data.hits)
+						d.resolve(data.hits);
 					})
 					.error(function(data, status) {
 						console.log('feF', data, status);
@@ -69,7 +69,7 @@ angular.module('myApp.services', [])
 				// var Jdata = JSON.stringify(dataObj);
 				$http.post('/saves', {data:data})
 				.success(function(data, status) {
-					d.resolve(data.hits)
+					d.resolve(data.hits);
 				})
 				.error(function(data, status) {
 					console.log('feFa', data, status);
@@ -77,7 +77,7 @@ angular.module('myApp.services', [])
 				});
 				return d.promise;
 			}
-		}
+		};
 
 		return service;
-	})
+	});

@@ -22,7 +22,7 @@ angular.module('myApp.services', [])
 				$http.post('/hits', {})
 					.success(function(data, status) {
 						console.log('feS', data, status);
-						d.resolve(data.hits)
+						d.resolve(data.hits);
 					})
 					.error(function(data, status) {
 						console.log('feF', data, status);
@@ -38,7 +38,7 @@ angular.module('myApp.services', [])
 				// var Jdata = JSON.stringify(dataObj);
 				$http.post('/saves', {data:data})
 				.success(function(data, status) {
-					d.resolve(data.hits)
+					d.resolve(data.hits);
 				})
 				.error(function(data, status) {
 					console.log('feFa', data, status);
@@ -46,7 +46,7 @@ angular.module('myApp.services', [])
 				});
 				return d.promise;
 			}
-		}
+		};
 
 		return service;
-	})
+	});
