@@ -1,7 +1,21 @@
 graduation-project
 ==================
-
 ##Install
-1. Clone / Download
-2. Change to project's root directory.
-    npm install
+ - Clone / Download
+ - Change to project's root directory
+ 
+
+> npm install
+
+  - install [mongodb](http://www.mongodb.org/downloads)
+  
+##Run
+- Change to mongodb directory
+
+> mongod -dbpath data
+
+ - Change to project's root directory
+> nodemon
+> gulp
+
+- Open [localhost:3000](localhost:3000)
