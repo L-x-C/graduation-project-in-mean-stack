@@ -3,8 +3,8 @@
 *
 * Description
 */
-angular.module('myApp', ['ngRoute','myApp.services'])
-	.controller('HomeController', function($scope, HitService){
+var myApp = angular.module('myApp', ['ngRoute','myApp.services','ngMaterial']);
+myApp.controller('HomeController', function($scope, HitService){
 		HitService.count()
 			.then(function(data){
 				$scope.hits = data;
@@ -23,3 +23,9 @@ angular.module('myApp', ['ngRoute','myApp.services'])
 				});
 		}
 	});
+myApp.controller('AppCtrl', function($scope) {
+  $scope.title1 = 'Button';
+  $scope.title4 = 'Warn';
+  $scope.isDisabled = true;
+  $scope.googleUrl = 'http://google.com';
+});
