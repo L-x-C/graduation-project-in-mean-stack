@@ -15,7 +15,14 @@ graduation-project
 > `mongod -dbpath data`
 
  - Change to project's root directory
+ 
 > `gulp`
+
+ - Same place
+ 
 > `nodemon`
 
- - Open [localhost:3000](localhost:3000)
+ 
+
+- Open [localhost:3000](localhost:3000)
+
