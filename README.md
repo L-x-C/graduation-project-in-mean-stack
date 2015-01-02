@@ -1,4 +1,7 @@
 graduation-project
 ==================
 
-挖个坑
+##Install
+1. clone / download
+2. cd ./graduation-project
+'npm install'
