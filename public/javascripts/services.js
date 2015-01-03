@@ -17,12 +17,11 @@ angular.module('myApp.services', [])
 					});
 				return d.promise;
 			},
-			registerHit: function() {
+			registerHit: function(name) {
 				var d = $q.defer();
-				$http.post('/hits', {})
+				$http.post('/hits', {name:name})
 					.success(function(data, status) {
-						console.log('feS', data, status);
-						d.resolve(data.hits);
+						d.resolve(data.data.number);
 					})
 					.error(function(data, status) {
 						console.log('feF', data, status);

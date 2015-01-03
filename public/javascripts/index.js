@@ -10,14 +10,13 @@ myApp.controller('HomeController', function($scope, HitService){
 				$scope.hits = data;
 			});
 		$scope.registerHit = function() {
-			HitService.registerHit()
+			HitService.registerHit(this.yourName)
 				.then(function(data){
-					console.log(data);
 					$scope.hits = data;
 				}); 
 		};
 		$scope.saveHit = function() {
-			HitService.saveHit(this.fuckingData)
+			HitService.saveHit([this.yourName,this.fuckingData])
 				.then(function(data){
 					$scope.fuckingData = data;
 				});

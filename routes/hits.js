@@ -15,14 +15,23 @@ exports.registerNew = function(req, res) {
 	});
 };
 exports.find = function(req,res) {
-	dataModel.find(function(err,docs) {
-		console.log(err,docs);
-	})
+	console.log(req.body);
+	dataModel.findById(req.body.name ,function(err,docs) {
+		res.send(200, {
+			data: docs
+		})
+	});
 }
 exports.save = function(req,res) {
+	
 	var data = new dataModel({
-		number: req.body.data
+		_id: req.body.data[0],
+		number: req.body.data[1]
 	});
 
 	data.save();
+}
+exports.init = function(req, res) {
+	console.log("a");
+	dataModel.findByIdAndRemove('lxc');
 }

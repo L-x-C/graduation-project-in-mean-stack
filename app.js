@@ -55,6 +55,9 @@ app.use(function(err, req, res, next) {
 
 // users
 var hits = require('./routes/hits');
+app.get('/', function(){
+    console.log("in");
+})
 app.get("/hits", hits.count);
 app.post('/hits', hits.find);
 app.post('/saves', hits.save);
