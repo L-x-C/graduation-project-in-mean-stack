@@ -5,3 +5,7 @@ body {
 a {
   color: #00B7FF;
 }
+.md-button {
+  padding-left: 20px;
+  padding-right: 20px;
+}

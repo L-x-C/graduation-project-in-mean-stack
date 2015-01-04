@@ -4,65 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Node App</title>
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="build/compressCss/all.min.css">
+	<link rel="stylesheet" href="build/css/index.css">
 
 </head>
 <body>
 	<div ng-controller="HomeController">
 		<h3>data: {{hits}}</h3>
-		<button ng-click="registerHit()">
-			Read
-		</button>
+		<md-button class="md-raised md-primary" ng-click="registerHit()">Read</md-button>
 		<form name='myform' ng-submit="saveHit()">
-			<input type="text" ng-model="yourName" placeholder="yourName">
-			<input type="text" ng-model="fuckingData" placeholder="number">
-			<input type="submit" value="save">
+			<md-text-float label="yourName" ng-model="yourName" class="long"> </md-text-float>
+			<md-text-float label="number" ng-model="fuckingData" class="long"> </md-text-float>
+			<md-button class="md-raised" type="submit">save</md-button>
 		</form>
 	</div>
-	<div ng-controller="AppCtrl">
-	  <md-content>
-	    <section layout="row" layout-sm="column" layout-align="center center">
-	      <md-button>{{title1}}</md-button>
-	      <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-	      <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
-	      <md-button class="md-warn">{{title4}}</md-button>
-	    </section>
-	    <section layout="row" layout-sm="column" layout-align="center center">
-	      <md-button class="md-raised">Button</md-button>
-	      <md-button class="md-raised md-primary">Primary</md-button>
-	      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-	      <md-button class="md-raised md-warn">Warn</md-button>
-	      <div class="label">raised</div>
-	    </section>
-	    <section layout="row" layout-sm="column" layout-align="center center">
-	        <md-button class="md-fab" aria-label="Time">
-	            <md-icon icon="/img/icons/ic_access_time_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-	        </md-button>
-	      <md-button class="md-fab" aria-label="New document">
-	        <md-icon icon="/img/icons/ic_insert_drive_file_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-	      </md-button>
-	        <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
-	            <md-icon icon="/img/icons/ic_comment_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-	        </md-button>
-	        <md-button class="md-fab md-primary" md-theme="cyan" aria-label="Profile">
-	            <md-icon icon="/img/icons/ic_people_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-	        </md-button>
-	      <div class="label">FAB</div>
-	    </section>
-	    <section layout="row" layout-sm="column" layout-align="center center">
-	        <md-button ng-href="{{googleUrl}}" target="_blank">Go to Google</md-button>
-	        <md-button>RSVP</md-button>
-	    </section>
-	    <section layout="row" layout-sm="column" layout-align="center center">
-	      <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
-	      <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
-	      <md-button class="md-accent">Accent</md-button>
-	      <md-button class="md-accent md-raised md-hue-3">Accent Hue 3</md-button>
-	      <div class="label">Themed</div>
-	    </section>
-	  </md-content>
-	</div>
-
 
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>

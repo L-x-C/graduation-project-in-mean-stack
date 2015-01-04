@@ -10,14 +10,13 @@ myApp.controller('HomeController', function($scope, HitService){
 				$scope.hits = data;
 			});
 		$scope.registerHit = function() {
-			HitService.registerHit()
+			HitService.registerHit(this.yourName)
 				.then(function(data){
-					console.log(data);
 					$scope.hits = data;
 				}); 
 		};
 		$scope.saveHit = function() {
-			HitService.saveHit(this.fuckingData)
+			HitService.saveHit([this.yourName,this.fuckingData])
 				.then(function(data){
 					$scope.fuckingData = data;
 				});
@@ -48,12 +47,11 @@ angular.module('myApp.services', [])
 					});
 				return d.promise;
 			},
-			registerHit: function() {
+			registerHit: function(name) {
 				var d = $q.defer();
-				$http.post('/hits', {})
+				$http.post('/hits', {name:name})
 					.success(function(data, status) {
-						console.log('feS', data, status);
-						d.resolve(data.hits);
+						d.resolve(data.data.number);
 					})
 					.error(function(data, status) {
 						console.log('feF', data, status);
