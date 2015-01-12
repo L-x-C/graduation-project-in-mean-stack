@@ -1,0 +1,20 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "homepage": "https://github.com/L-x-C/graduation-project",
+  "authors": [
+    "lxc"
+  ],
+  "description": "graduation project bower",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.6.1"
+  }
+}

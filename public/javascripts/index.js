@@ -3,7 +3,7 @@
 *
 * Description
 */
-var myApp = angular.module('myApp', ['ngRoute','myApp.services','ngMaterial']);
+var myApp = angular.module('myApp', ['myApp.services','ngMaterial']);
 myApp.controller('HomeController', function($scope, HitService){
 		HitService.count()
 			.then(function(data){
