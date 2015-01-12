@@ -7,6 +7,8 @@ graduation-project
  
 
 > `npm install`
+> `cd public`
+> `bower install`
 
   - install [mongodb](http://www.mongodb.org/downloads)
   
