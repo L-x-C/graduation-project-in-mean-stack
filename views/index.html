@@ -8,23 +8,14 @@
 
 </head>
 <body>
-	<div ng-controller="HomeController">
-		<h3>data: {{hits}}</h3>
-		<md-button class="md-raised md-primary" ng-click="registerHit()">Read</md-button>
-		<form name='myform' ng-submit="saveHit()">
-			<md-text-float label="yourName" ng-model="yourName" class="long"> </md-text-float>
-			<md-text-float label="number" ng-model="fuckingData" class="long"> </md-text-float>
-			<md-button class="md-raised" type="submit">save</md-button>
-		</form>
-	</div>
 
+	
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="bower_components/hammerjs/hammer.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
 
-	<script src="javascripts/services.js"></script>
 	<script src="javascripts/index.js"></script>
 </body>
 </html>

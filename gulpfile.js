@@ -54,46 +54,6 @@ gulp.task('clean', function() {
 		}));
 });
 
-// 将bower的库文件对应到指定位置
-// gulp.task('buildlib',function(){
-
-//   gulp.src('./bower_components/angular/angular.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/angular/angular.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/bootstrap/dist/js/bootstrap.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/jquery/dist/jquery.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/angular-route/angular-route.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/angular-animate/angular-animate.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/angular-bootstrap/ui-bootstrap.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   gulp.src('./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
-//	   .pipe(gulp.dest('./javis/static/build/js/'))
-
-//   //--------------------------css-------------------------------------
-
-//   gulp.src('./javis/static/less/fonts/*')
-//	   .pipe(gulp.dest('./javis/static/build/css/fonts/'))
-
-//   gulp.src('./bower_components/bootstrap/fonts/*')
-//	   .pipe(gulp.dest('./javis/static/build/css/fonts/'))
-
-//   gulp.src('./bower_components/bootstrap/dist/css/bootstrap.min.css')
-//	   .pipe(gulp.dest('./javis/static/build/css/lib'))
-
-// });
-
 // 定义develop任务在日常开发中使用
 gulp.task('develop', function() {
 	gulp.run('build-less', 'lint', 'javascripts', 'stylesheets');
