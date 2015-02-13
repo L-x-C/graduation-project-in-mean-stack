@@ -8,11 +8,12 @@
 
 </head>
 <body>
-	<header>
+	<header ng-controller="headCtr">
 		<video loop="loop" preload="auto" autoplay="autoplay">
 			<source src="//a0.muscache.com/airbnb/static/Paris-P1-1.mp4" type="video/mp4">
 			<source src="//a0.muscache.com/airbnb/static/Paris-P1-0.webm" type="video/webm">
 		</video>
+
 		<nav>
 			<a href="#" class="nav_logo">LxC</a>
 			<div class="nav_right">
@@ -21,15 +22,26 @@
 				<md-button class="md-raised md-primary">发布房源</md-button>
 			</div>
 		</nav>
+
 		<div class="header_content">
 			<h1>欢迎回家</h1>
 			<p>向你提供一个独一无二的家</p>
 			<md-button class="md-raised">如何使用</md-button>
 		</div>
-
 		<div class="header_footer">
-			
+			<md-content md-theme="docs-dark" class="md-padding " layout="row" layout-sm="column" style="font-size:1.2em" layout-margin>
+				<md-input-container>
+					<label>您想住哪里</label>
+					<input >
+				</md-input-container>
+				<md-input-container>
+					<label>几位房客</label>
+					<input>
+				</md-input-container>
+				<md-button class="md-raised md-warn">搜索</md-button>
+			</md-content>
 		</div>
+
 	</header>
 
 	<script src="bower_components/angular/angular.min.js"></script>
