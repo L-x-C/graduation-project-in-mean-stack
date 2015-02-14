@@ -1,5 +1,10 @@
 * {
   font-family: 'Microsoft YaHei', SimHei, sans-serif;
+  color: #565a5c;
+}
+h1,
+p {
+  margin: 0;
 }
 header {
   position: relative;
@@ -22,52 +27,124 @@ header nav a {
   text-decoration: none;
   color: #fff;
 }
-header .nav_right {
+header .nav-right {
   float: right;
   margin-right: 30px;
 }
-header .nav_right button {
+header .nav-right button {
+  color: #fff;
   height: 40px;
   line-height: 30px;
 }
-header .nav_logo {
+header .nav-right button span {
+  color: #fff;
+}
+header .nav-logo {
   float: left;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   margin-left: 30px;
 }
-header .nav_login,
-header .nav_signup {
+header .nav-login,
+header .nav-signup {
   margin-right: 10px;
 }
-header .header_content {
+header .header-content {
   position: absolute;
   top: 160px;
   width: 100%;
   text-align: center;
 }
-header .header_content h1 {
+header .header-content h1 {
   color: #fff;
   font-size: 60px;
   font-weight: 900;
   margin: 0;
 }
-header .header_content p {
+header .header-content p {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
 }
-header .header_content button {
-  color: #fff;
+header .header-content button {
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.6);
 }
-header .header_footer {
+header .header-footer {
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
   width: 100%;
-  height: 110px;
 }
+header .header-footer md-content {
+  width: 40%;
+  margin: 0 auto;
+  background: none;
+}
+header .header-footer md-content label {
+  color: rgba(255, 255, 255, 0.8);
+}
+header .header-footer md-content button {
+  margin-top: 20px;
+  height: 40px;
+  line-height: 30px;
+  flex: 1;
+}
+header .header-footer md-content md-input-container {
+  flex: 3;
+  margin-right: 80px;
+}
+.panel {
+  background-color: #edefed;
+}
+.panel .panel-content {
+  width: 1200px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.panel .panel-intro h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+.panel .panel-intro p {
+  font-size: 16px;
+}
+.panel .panel-detail {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.panel .panel-detail a {
+  flex: 1;
+  height: 345px;
+  width: 345px;
+  line-height: 345px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 33px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.panel .panel-detail .yp {
+  background: url(/imgs/yp.webp);
+}
+.panel .panel-detail .hk {
+  margin: 0 20px;
+  background: url(/imgs/hk.webp);
+}
+.panel .panel-detail .hp {
+  background: url(/imgs/hp.webp);
+}
+.panel .panel-detail .yp,
+.panel .panel-detail .hp {
+  background-size: 100% 100%;
+}
+.panel .panel-more button {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 100px;
+}
+

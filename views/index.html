@@ -5,30 +5,29 @@
 	<title>Node App</title>
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="build/css/index.css">
-
 </head>
 <body>
-	<header ng-controller="headCtr">
+	<header>
 		<video loop="loop" preload="auto" autoplay="autoplay">
 			<source src="//a0.muscache.com/airbnb/static/Paris-P1-1.mp4" type="video/mp4">
 			<source src="//a0.muscache.com/airbnb/static/Paris-P1-0.webm" type="video/webm">
 		</video>
 
 		<nav>
-			<a href="#" class="nav_logo">LxC</a>
-			<div class="nav_right">
-				<a href="" class="nav_login">登陆</a>
-				<a href="" class="nav_signup">注册</a>
+			<a href="#" class="nav-logo">LxC</a>
+			<div class="nav-right">
+				<a href="" class="nav-login">登陆</a>
+				<a href="" class="nav-signup">注册</a>
 				<md-button class="md-raised md-primary">发布房源</md-button>
 			</div>
 		</nav>
 
-		<div class="header_content">
+		<div class="header-content">
 			<h1>欢迎回家</h1>
 			<p>向你提供一个独一无二的家</p>
 			<md-button class="md-raised">如何使用</md-button>
 		</div>
-		<div class="header_footer">
+		<div class="header-footer">
 			<md-content md-theme="docs-dark" class="md-padding " layout="row" layout-sm="column" style="font-size:1.2em" layout-margin>
 				<md-input-container>
 					<label>您想住哪里</label>
@@ -41,8 +40,45 @@
 				<md-button class="md-raised md-warn">搜索</md-button>
 			</md-content>
 		</div>
-
 	</header>
+	
+	<div class="panel">
+		<div class="panel-content">
+			<div class="panel-intro">
+				<h1>上海好去处</h1>
+				<p>发现离家最近的地方</p>
+			</div>
+			<div class="panel-detail" layout="row" layout-margin>
+				<a href="" class="yp">杨浦</a>
+				<a href="" class="hk">虹口</a>
+				<a href="" class="hp">黄浦</a>
+			</div>
+			<a href="" class="panel-more">
+				<md-button class="md-raised">查看所有目的地</md-button>
+			</a>
+		</div>
+
+		<div class="panel-content">
+			<div class="panel-intro">
+				<h1>探索中国</h1>
+				<p>搜罗全国热门目的地</p>
+			</div>
+			<div class="panel-detail">
+				<a href="" class="bj">北京</a>
+				<a href="" class="sh">上海</a>
+				<a href="" class="gz">广州</a>
+				<a href="" class="sz">深圳</a>
+				<a href="" class="qd">青岛</a>
+				<a href="" class="hz">杭州</a>
+				<a href="" class="dl">大连</a>
+				<a href="" class="cd">成都</a>
+				<a href="" class="gl">桂林</a>
+				<a href="" class="zh">珠海</a>
+			</div>
+		</div>
+	</div>
+
+
 
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>

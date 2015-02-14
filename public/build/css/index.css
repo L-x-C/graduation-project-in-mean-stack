@@ -1,5 +1,10 @@
 * {
   font-family: 'Microsoft YaHei', SimHei, sans-serif;
+  color: #565a5c;
+}
+h1,
+p {
+  margin: 0;
 }
 header {
   position: relative;
@@ -22,65 +27,163 @@ header nav a {
   text-decoration: none;
   color: #fff;
 }
-header .nav_right {
+header .nav-right {
   float: right;
   margin-right: 30px;
 }
-header .nav_right button {
+header .nav-right button {
+  color: #fff;
   height: 40px;
   line-height: 30px;
 }
-header .nav_logo {
+header .nav-right button span {
+  color: #fff;
+}
+header .nav-logo {
   float: left;
   font-weight: bold;
   font-size: 25px;
   margin-left: 30px;
 }
-header .nav_login,
-header .nav_signup {
+header .nav-login,
+header .nav-signup {
   margin-right: 10px;
 }
-header .header_content {
+header .header-content {
   position: absolute;
   top: 160px;
   width: 100%;
   text-align: center;
 }
-header .header_content h1 {
+header .header-content h1 {
   color: #fff;
   font-size: 60px;
   font-weight: 900;
   margin: 0;
 }
-header .header_content p {
+header .header-content p {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
 }
-header .header_content button {
+header .header-content button {
   padding: 10px 20px;
 }
-header .header_footer {
+header .header-footer {
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-header .header_footer md-content {
+header .header-footer md-content {
   width: 40%;
   margin: 0 auto;
   background: none;
 }
-header .header_footer md-content label {
+header .header-footer md-content label {
   color: rgba(255, 255, 255, 0.8);
 }
-header .header_footer md-content button {
+header .header-footer md-content button {
   margin-top: 20px;
   height: 40px;
   line-height: 30px;
   flex: 1;
 }
-header .header_footer md-content md-input-container {
+header .header-footer md-content md-input-container {
   flex: 3;
   margin-right: 80px;
+}
+.panel {
+  background-color: #edefed;
+}
+.panel .panel-content {
+  width: 1095px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.panel .panel-intro h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+.panel .panel-intro p {
+  font-size: 16px;
+}
+.panel .panel-detail {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0 10px 0;
+}
+.panel .panel-detail a {
+  width: 345px;
+  height: 345px;
+  line-height: 345px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 33px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: red;
+  float: left;
+  margin-bottom: 30px;
+}
+.panel .panel-detail .yp {
+  background: url(/imgs/yp.webp);
+}
+.panel .panel-detail .hk {
+  background: url(/imgs/hk.webp);
+}
+.panel .panel-detail .hp {
+  background: url(/imgs/hp.webp);
+}
+.panel .panel-detail .bj {
+  background: url(/imgs/bj.webp);
+}
+.panel .panel-detail .sh {
+  background: url(/imgs/sh.webp);
+}
+.panel .panel-detail .gz {
+  background: url(/imgs/gz.webp);
+}
+.panel .panel-detail .sz {
+  background: url(/imgs/sz.webp);
+  width: 720px;
+  margin-right: 30px;
+}
+.panel .panel-detail .qd {
+  background: url(/imgs/qd.webp);
+}
+.panel .panel-detail .hz {
+  background: url(/imgs/hz.webp);
+}
+.panel .panel-detail .dl {
+  background: url(/imgs/dl.webp);
+}
+.panel .panel-detail .cd {
+  background: url(/imgs/cd.webp);
+}
+.panel .panel-detail .gl {
+  background: url(/imgs/gl.webp);
+}
+.panel .panel-detail .zh {
+  background: url(/imgs/zh.webp);
+  width: 720px;
+  margin-left: 30px;
+}
+.panel .panel-detail .hk,
+.panel .panel-detail .sh,
+.panel .panel-detail .dl {
+  margin: 0 30px;
+}
+.panel .panel-detail .yp,
+.panel .panel-detail .hp {
+  background-size: 100% 100%;
+}
+.panel .panel-more button {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 100px;
 }

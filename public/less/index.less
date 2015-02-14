@@ -1,5 +1,10 @@
+@import "mixin";
 * {
 	font-family: 'Microsoft YaHei', SimHei, sans-serif;
+	color: #565a5c;
+}
+h1,p {
+	margin: 0;
 }
 header {
 	position: relative;
@@ -21,25 +26,29 @@ header {
 			color: #fff;
 		}
 	}
-	.nav_right {
+	.nav-right {
 		float: right;
 		margin-right: 30px;
 		button {
+			color: #fff;
 			height: 40px;
 			line-height: 30px;
+			span {
+				color: #fff;
+			}
 		}
 	}
-	.nav_logo {
+	.nav-logo {
 		float: left;
 		font-weight: bold;
 		font-size: 25px;
 		margin-left: 30px;
 	}
-	.nav_login,.nav_signup {
+	.nav-login,.nav-signup {
 		margin-right: 10px;
 	}
 
-	.header_content {
+	.header-content {
 		position: absolute;
 		top: 160px;
 		width: 100%;
@@ -60,14 +69,11 @@ header {
 		}
 	}
 	
-	.header_footer {
+	.header-footer {
 		background: rgba(0,0,0,0.6);
 		position: absolute;
 		bottom: 0;
-		// padding-top: 30px;
-		// padding-bottom: 30px;
 		width: 100%;
-		// height: 110px;
 		md-content {
 			width: 40%;
 			margin: 0 auto;
@@ -86,6 +92,103 @@ header {
 				flex: 3;
 				margin-right: 80px;
 			}
+		}
+	}
+}
+
+.panel {
+	background-color: #edefed;
+	.panel-content {
+		width: 1095px;
+		text-align: center;
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 50px 0;
+	}
+	.panel-intro {
+		h1 {
+			font-weight: bold;
+			font-size: 32px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	.panel-detail {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 40px 0 10px 0;
+		a {
+			width: 345px;
+			height: 345px;
+			line-height: 345px;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 33px;
+			color: #fff;
+			text-align: center;
+			box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+			background: red;
+			float: left;
+			margin-bottom: 30px;
+		}
+		.yp {
+			background: url(/imgs/yp.webp);
+		}
+		.hk {
+			background: url(/imgs/hk.webp);
+		}
+		.hp {
+			background: url(/imgs/hp.webp);
+		}
+
+		.bj {
+			background: url(/imgs/bj.webp);
+		}
+		.sh {
+			background: url(/imgs/sh.webp);
+		}
+		.gz {
+			background: url(/imgs/gz.webp);
+		}
+		.sz {
+			background: url(/imgs/sz.webp);
+			width: 720px;
+			margin-right: 30px;
+		}
+		.qd {
+			background: url(/imgs/qd.webp);
+		}
+		.hz {
+			background: url(/imgs/hz.webp);
+		}
+		.dl {
+			background: url(/imgs/dl.webp);
+		}
+		.cd {
+			background: url(/imgs/cd.webp);
+		}
+		.gl {
+			background: url(/imgs/gl.webp);
+		}
+		.zh {
+			background: url(/imgs/zh.webp);
+			width: 720px;
+			margin-left: 30px;
+		}
+		.hk,.sh,.dl {
+			margin: 0 30px;
+		}
+		.yp,.hp {
+			background-size: 100% 100%;
+		}
+	}
+	.panel-more {
+		button {
+			font-weight: bold;
+			font-size: 16px;
+			padding: 10px 100px;
 		}
 	}
 }
