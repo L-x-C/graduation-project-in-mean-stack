@@ -285,4 +285,11 @@ footer {
 			font-size: 30px;
 		}
 	}
+	&.ng-enter,&.ng-leave,&.ng-move {
+		.transition(all linear 0.3s);
+	}
+	&.ng-enter,&.ng-move {
+		opacity: 0;
+		height: 0;
+	}
 }

@@ -289,3 +289,16 @@ footer .weibo:hover .icon-weibo:before {
 .how-it-works .close:before {
   font-size: 30px;
 }
+.how-it-works.ng-enter,
+.how-it-works.ng-leave,
+.how-it-works.ng-move {
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.how-it-works.ng-enter,
+.how-it-works.ng-move {
+  opacity: 0;
+  height: 0;
+}
