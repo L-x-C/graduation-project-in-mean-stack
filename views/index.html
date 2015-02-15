@@ -8,40 +8,69 @@
 	<link rel="stylesheet" href="build/css/index.css">
 </head>
 <body>
-	<header>
-		<video loop="loop" preload="auto" autoplay="autoplay">
-			<source src="//a0.muscache.com/airbnb/static/Paris-P1-1.mp4" type="video/mp4">
-			<source src="//a0.muscache.com/airbnb/static/Paris-P1-0.webm" type="video/webm">
-		</video>
-
-		<nav>
-			<a href="#" class="nav-logo">LxC</a>
-			<div class="nav-right">
-				<a href="" class="nav-login">登陆</a>
-				<a href="" class="nav-signup">注册</a>
-				<md-button class="md-raised md-primary">发布房源</md-button>
+	<div class="head-wrapper" ng-controller="indexCtrl">
+		<div class="how-it-works" ng-show="isShow">
+			<div class="how-it-works-container">
+				<div class="how-it-works-list">
+					<div class="how-it-works-img"></div>
+					<div class="how-it-works-info">
+						<h3>搜索最棒的住宿</h3>
+						<p>无论私人单间，整套公寓，还是城堡，房车，船屋等特色住宿，您都可以在这上找到。</p>
+					</div>
+				</div>
+				<div class="how-it-works-list">
+					<div class="how-it-works-img how-it-works-img2"></div>
+					<div class="how-it-works-info">
+						<h3>预订住宿</h3>
+						<p>联系房东、确认旅行日期 — 一切都能通过这个值得信赖的服务完成。</p>
+					</div>
+				</div>
+				<div class="how-it-works-list">
+					<div class="how-it-works-img how-it-works-img3"></div>
+					<div class="how-it-works-info">
+						<h3>开始旅行</h3>
+						<p>无论您身处世界的哪个角落, 您都可以享受"家"的感觉。</p>
+					</div>
+				</div>
 			</div>
-		</nav>
+			<span class="close icon-cancel-1" ng-click="closeHowToUse()"></span>
+		</div>
+		<header>
+			<video loop="loop" preload="auto" autoplay="autoplay">
+				<source src="//a0.muscache.com/airbnb/static/Paris-P1-1.mp4" type="video/mp4">
+				<source src="//a0.muscache.com/airbnb/static/Paris-P1-0.webm" type="video/webm">
+			</video>
 
-		<div class="header-content">
-			<h1>欢迎回家</h1>
-			<p>向你提供一个独一无二的家</p>
-			<md-button class="md-raised">如何使用</md-button>
-		</div>
-		<div class="header-footer">
-			<md-content md-theme="docs-dark" class="md-padding " layout="row" layout-sm="column" style="font-size:1.2em" layout-margin>
-				<md-input-container>
-					<label>您想住哪里</label>
-					<input >
-				</md-input-container>
-				<md-input-container>
-					<label>几位房客</label>
-					<input>
-				</md-input-container>
-				<md-button class="md-raised md-warn">搜索</md-button>
-			</md-content>
-		</div>
-	</header>
+			<nav>
+				<a href="#" class="nav-logo">LxC</a>
+				<div class="nav-right">
+					<a href="" class="nav-login">登陆</a>
+					<a href="" class="nav-signup">注册</a>
+					<md-button class="md-raised md-primary">发布房源</md-button>
+				</div>
+			</nav>
+
+			<div class="header-content">
+				<h1>欢迎回家</h1>
+				<p>向你提供一个独一无二的家</p>
+				<md-button class="md-raised" ng-click="showHowToUse()">如何使用</md-button>
+			</div>
+			<div class="header-footer">
+				<md-content md-theme="docs-dark" class="md-padding " layout="row" layout-sm="column" style="font-size:1.2em" layout-margin>
+					<md-input-container>
+						<label>您想住哪里</label>
+						<input >
+					</md-input-container>
+					<md-input-container>
+						<label>几位房客</label>
+						<input>
+					</md-input-container>
+					<md-button class="md-raised md-warn">搜索</md-button>
+				</md-content>
+			</div>
+		</header>
+	</div>
+
 	
 	<div class="panel">
 		<div class="panel-content">
@@ -92,6 +121,8 @@
 	<script src="bower_components/hammerjs/hammer.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
 
-	<script src="javascripts/index.js"></script>
+	<script src="javascripts/app.js"></script>
+	<script src="javascripts/controllers/index.js"></script>
+
 </body>
 </html>

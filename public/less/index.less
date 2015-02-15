@@ -8,6 +8,7 @@ h1,p {
 }
 header {
 	position: relative;
+	overflow: hidden;
 	height: 600px;
 	video {
 		bottom: 0;
@@ -230,6 +231,58 @@ footer {
 			.icon-weibo:before {
 				color: #cacccd;
 			}
+		}
+	}
+}
+
+.how-it-works {
+	overflow: hidden;
+	height: 665px;
+	background: #79CCCD;
+	.how-it-works-container {
+		width: 1020px;
+		height: 467px;
+		margin: 0 auto;
+		margin-top: 55px;
+	}
+	.how-it-works-list {
+		width: 340px;
+		height: 467px;
+		float: left;
+		text-align: center;
+		h3 {
+			font-size: 24px;
+			color: #fff;
+		}
+		p {
+			font-size: 14px;
+			color: #fff;
+		}
+	}
+	.how-it-works-img {
+		width: 275px;
+		height: 301px;
+		margin: 0 auto;
+		background: url(/imgs/index/how_to_use.png);
+		background-size: 100%;
+	}
+	.how-it-works-img2 {
+		background-position: 0 -302px;
+	}
+	.how-it-works-img3 {
+		background-position: 0 -603px;
+	}
+	.how-it-works-info {
+		width: 275px;
+		margin: 0 auto;
+	}
+	.close {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		cursor: pointer;
+		&:before {
+			font-size: 30px;
 		}
 	}
 }
