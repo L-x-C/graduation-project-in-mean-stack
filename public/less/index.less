@@ -83,10 +83,13 @@ header {
 			}
 			button {
 				margin-top: 20px;
-				// width: 100px;
+				color: #fff;
 				height: 40px;
 				line-height: 30px;
 				flex:1;
+				span {
+					color: #fff;
+				}
 			}
 			md-input-container {
 				flex: 3;
@@ -101,7 +104,6 @@ header {
 	.panel-content {
 		width: 1095px;
 		text-align: center;
-		overflow: hidden;
 		margin: 0 auto;
 		padding: 50px 0;
 	}
@@ -132,6 +134,13 @@ header {
 			background: red;
 			float: left;
 			margin-bottom: 30px;
+			.transition(all linear 0.3s);
+			&:nth-child(odd):hover {
+				.transform(rotate(3deg));
+			}
+			&:nth-child(even):hover {
+				.transform(rotate(-3deg));
+			}
 		}
 		.yp {
 			background: url(/imgs/yp.webp);
@@ -189,6 +198,38 @@ header {
 			font-weight: bold;
 			font-size: 16px;
 			padding: 10px 100px;
+		}
+	}
+}
+
+footer {
+	height: 190px;
+	background: #2b2d2e;
+	text-align: center;
+	overflow: hidden;
+	h5 {
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+		margin-top: 65px;
+	}
+	.weibo {
+		display: block;
+		height: 36px;
+		width: 36px;
+		border: 1px solid rgba(255,255,255,0.2);
+		border-radius: 50%;
+		text-align: center;
+		margin: 0 auto;
+		.icon-weibo:before {
+			margin-top: 9px;
+			margin-right: 5px;
+			color: #fff;
+		}
+		&:hover {
+			.icon-weibo:before {
+				color: #cacccd;
+			}
 		}
 	}
 }
