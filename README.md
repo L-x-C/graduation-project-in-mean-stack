@@ -23,7 +23,7 @@ graduation-project
 
  - Same place
  
-> `npm run coding`
+> `nodemon`
 
  
 
