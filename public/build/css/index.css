@@ -69,6 +69,7 @@ header .header-content p {
 }
 header .header-content button {
   padding: 10px 20px;
+  margin-top: 10px;
 }
 header .header-footer {
   background: rgba(0, 0, 0, 0.6);
