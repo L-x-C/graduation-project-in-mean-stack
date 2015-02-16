@@ -285,11 +285,17 @@ footer {
 			font-size: 30px;
 		}
 	}
-	&.ng-enter,&.ng-leave,&.ng-move {
-		.transition(all linear 0.3s);
+	.transition(all linear 0.3s);
+	&.ng-hide-remove {
+		height: 0;
 	}
-	&.ng-enter,&.ng-move {
-		opacity: 0;
+	&.ng-hide-remove-active {
+		height: 665px;
+	}
+	&.ng-hide-add {
+		height: 665px;
+	}
+	&.ng-hide-add-active {
 		height: 0;
 	}
 }
