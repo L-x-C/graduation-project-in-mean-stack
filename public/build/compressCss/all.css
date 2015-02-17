@@ -17,39 +17,6 @@ header video {
   width: 100%;
   display: inline-block;
 }
-header nav {
-  height: 90px;
-  line-height: 90px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-header nav a {
-  text-decoration: none;
-  color: #fff;
-}
-header .nav-right {
-  float: right;
-  margin-right: 30px;
-}
-header .nav-right button {
-  color: #fff;
-  height: 40px;
-  line-height: 30px;
-}
-header .nav-right button span {
-  color: #fff;
-}
-header .nav-logo {
-  float: left;
-  font-weight: bold;
-  font-size: 25px;
-  margin-left: 30px;
-}
-header .nav-login,
-header .nav-signup {
-  margin-right: 10px;
-}
 header .header-content {
   position: absolute;
   top: 160px;
@@ -98,6 +65,39 @@ header .header-footer md-content button span {
 header .header-footer md-content md-input-container {
   flex: 3;
   margin-right: 80px;
+}
+nav {
+  height: 90px;
+  line-height: 90px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+nav .nav-right {
+  float: right;
+  margin-right: 30px;
+}
+nav .nav-right button {
+  color: #fff;
+  height: 40px;
+  line-height: 30px;
+}
+nav .nav-right button span {
+  color: #fff;
+}
+nav .nav-logo {
+  float: left;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 30px;
+}
+nav .nav-login,
+nav .nav-signup {
+  margin-right: 10px;
 }
 .panel {
   background-color: #edefed;

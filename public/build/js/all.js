@@ -13,9 +13,14 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 
 	$urlRouterProvider.when("","/");
 	$stateProvider
-		.state("/", {
-			url: "/",
-			templateUrl: "../views/partials/main.html",
+		.state('/', {
+			url: '/',
+			templateUrl: '/views/partials/main.html',
 			controller: 'indexCtrl'
-		});
+		})
+		.state('new', {
+			url: '/rooms/new',
+			templateUrl: '/views/partials/new.html'
+			// controller: 'newCtrl'
+		})
 });

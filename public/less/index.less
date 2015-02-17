@@ -3,7 +3,10 @@
 	font-family: 'Microsoft YaHei', SimHei, sans-serif;
 	color: #565a5c;
 }
-h1,p {
+md-radio-group {
+	border:none;
+}
+h1,h2,p {
 	margin: 0;
 }
 header {
@@ -16,38 +19,8 @@ header {
 		width: 100%;
 		display: inline-block;
 	}
-	nav {
-		height: 90px;
-		line-height: 90px;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		a {
-			text-decoration: none;
-			color: #fff;
-		}
-	}
-	.nav-right {
-		float: right;
-		margin-right: 30px;
-		button {
-			color: #fff;
-			height: 40px;
-			line-height: 30px;
-			span {
-				color: #fff;
-			}
-		}
-	}
-	.nav-logo {
-		float: left;
-		font-weight: bold;
-		font-size: 25px;
-		margin-left: 30px;
-	}
-	.nav-login,.nav-signup {
-		margin-right: 10px;
-	}
+
+
 
 	.header-content {
 		position: absolute;
@@ -100,7 +73,43 @@ header {
 		}
 	}
 }
-
+nav {
+	height: 90px;
+	line-height: 90px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+	.nav-right {
+		float: right;
+		margin-right: 30px;
+		button {
+			color: #fff;
+			height: 40px;
+			line-height: 30px;
+			span {
+				color: #fff;
+			}
+		}
+	}
+	.nav-logo {
+		float: left;
+		font-weight: bold;
+		font-size: 25px;
+		margin-left: 30px;
+	}
+	.nav-login,.nav-signup {
+		margin-right: 10px;
+	}
+}
+.navbar {
+	position: relative;
+	height: 90px;
+	background: #565A5C;
+}
 .panel {
 	background-color: #edefed;
 	.panel-content {
@@ -298,5 +307,66 @@ footer {
 	}
 	&.ng-hide-add-active {
 		height: 0;
+	}
+}
+
+.new {
+	.new-header {
+		height: 200px;
+		text-align: center;
+		overflow: hidden;
+		h2 {
+			font-size: 32px;
+			margin-top: 50px;
+			font-weight: normal;			
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	.new-container {
+		background: #F5F5F5;
+		overflow: hidden;
+	}
+	md-content {
+		width: 600px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	md-item-content {
+		background: #F5F5F5;
+	}
+	md-radio-button {
+		width: 100px;
+	}
+	.md-tile-content {
+		margin-left: 15px;
+		.new-slider {
+			border: 2px solid #707070;
+			border-radius: 5px;
+			background: #F5F5F5;
+		}
+		.new-money {
+			margin-left: 15px;
+		}
+	}
+	.md-tile-left {
+		width: 100px;
+		font-size: 18px;
+		text-align: right;
+		
+	}
+	md-slider {
+		margin-top: 2px;
+	}
+	.new-publish {
+		display: flex;
+		justify-content: center;
+		button {
+			padding: 10px 30px;
+			span {
+				color: #fff;
+			}
+		}
 	}
 }
