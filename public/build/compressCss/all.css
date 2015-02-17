@@ -69,6 +69,7 @@ header .header-content p {
 }
 header .header-content button {
   padding: 10px 20px;
+  margin-top: 10px;
 }
 header .header-footer {
   background: rgba(0, 0, 0, 0.6);
@@ -242,6 +243,10 @@ footer .weibo:hover .icon-weibo:before {
   overflow: hidden;
   height: 665px;
   background: #79CCCD;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
 }
 .how-it-works .how-it-works-container {
   width: 1020px;
@@ -289,17 +294,16 @@ footer .weibo:hover .icon-weibo:before {
 .how-it-works .close:before {
   font-size: 30px;
 }
-.how-it-works.ng-enter,
-.how-it-works.ng-leave,
-.how-it-works.ng-move {
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-  transition: all linear 0.3s;
+.how-it-works.ng-hide-remove {
+  height: 0;
 }
-.how-it-works.ng-enter,
-.how-it-works.ng-move {
-  opacity: 0;
+.how-it-works.ng-hide-remove-active {
+  height: 665px;
+}
+.how-it-works.ng-hide-add {
+  height: 665px;
+}
+.how-it-works.ng-hide-add-active {
   height: 0;
 }
 
