@@ -21,6 +21,5 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 		.state('new', {
 			url: '/rooms/new',
 			templateUrl: '/views/partials/new.html'
-			// controller: 'newCtrl'
 		})
 });

@@ -4,7 +4,7 @@
     -o-transition: @value;
     transition: @value;	
 }
-.perspective(@value:none) {
+.perspective(@value) {
 	-webkit-perspective: @value;
 	-moz-perspective: @value;
 	perspective: @value;
@@ -15,4 +15,11 @@
 	-ms-transform: @value;
 	-o-transform: @value;
 	transform: @value;	
+}
+.animation(@value) {
+	-webkit-animation: @value;
+	-moz-animation: @value;
+	-ms-animation: @value;
+	-o-animation: @value;
+	animation: @value;
 }

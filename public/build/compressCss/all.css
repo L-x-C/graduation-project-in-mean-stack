@@ -2,7 +2,11 @@
   font-family: 'Microsoft YaHei', SimHei, sans-serif;
   color: #565a5c;
 }
+md-radio-group {
+  border: none;
+}
 h1,
+h2,
 p {
   margin: 0;
 }
@@ -98,6 +102,11 @@ nav .nav-logo {
 nav .nav-login,
 nav .nav-signup {
   margin-right: 10px;
+}
+.navbar {
+  position: relative;
+  height: 90px;
+  background: #565A5C;
 }
 .panel {
   background-color: #edefed;
@@ -305,6 +314,63 @@ footer .weibo:hover .icon-weibo:before {
 }
 .how-it-works.ng-hide-add-active {
   height: 0;
+}
+.new .new-header {
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+.new .new-header h2 {
+  font-size: 32px;
+  margin-top: 50px;
+  font-weight: normal;
+}
+.new .new-header p {
+  font-size: 16px;
+}
+.new .new-container {
+  background: #F5F5F5;
+  overflow: hidden;
+}
+.new md-content {
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.new md-item-content {
+  background: #F5F5F5;
+}
+.new md-radio-button {
+  width: 100px;
+}
+.new .md-tile-content {
+  margin-left: 15px;
+}
+.new .md-tile-content .new-slider {
+  border: 2px solid #707070;
+  border-radius: 5px;
+  background: #F5F5F5;
+}
+.new .md-tile-content .new-money {
+  margin-left: 15px;
+}
+.new .md-tile-left {
+  width: 100px;
+  font-size: 18px;
+  text-align: right;
+}
+.new md-slider {
+  margin-top: 2px;
+}
+.new .new-publish {
+  display: flex;
+  justify-content: center;
+}
+.new .new-publish button {
+  padding: 10px 30px;
+}
+.new .new-publish button span {
+  color: #fff;
 }
 
 
