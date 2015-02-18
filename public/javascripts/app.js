@@ -22,4 +22,12 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 			url: '/rooms/new',
 			templateUrl: '/views/partials/new.html'
 		})
+		.state('signup', {
+			url: '/signup',
+			templateUrl: '/views/partials/signup.html'
+		})
+		.state('login', {
+			url: '/login',
+			templateUrl: '/views/partials/login.html'
+		})
 });

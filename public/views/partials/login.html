@@ -1,0 +1,43 @@
+<div ng-include="'/views/partials/navbar.html'"></div>
+
+<div class="new">
+	<div class="new-header">
+		<h2>登陆</h2>
+		<p>您可以在此登陆您的账号</p>
+	</div>
+	<div class="new-container">
+		<md-content>
+			<md-list>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">账号</div>
+						<div class="md-tile-content">
+							<md-input-container>
+							   <label>请输入邮箱账号</label>
+							   <input type="email" ng-model="user.username">
+							 </md-input-container>
+						</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">密码</div>
+						<div class="md-tile-content">
+							<md-input-container>
+							   <label>请输入密码</label>
+							   <input type="password" ng-model="user.password">
+							 </md-input-container>
+						</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-content new-publish">
+							<md-button class="md-raised md-primary">登陆</md-button>
+						</div>
+					</md-item-content>
+				</md-item>
+			</md-list>
+		</md-content>
+	</div>
+</div>

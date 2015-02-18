@@ -416,10 +416,13 @@ footer .weibo:hover .icon-weibo:before {
 .new .new-container {
   background: #F5F5F5;
   overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .new md-content {
   width: 600px;
-  margin: 0 auto;
   overflow: hidden;
 }
 .new md-item-content {
