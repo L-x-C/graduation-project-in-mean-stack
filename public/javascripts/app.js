@@ -12,6 +12,7 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 
 
 	$urlRouterProvider.when("","/");
+
 	$stateProvider
 		.state('/', {
 			url: '/',
@@ -29,5 +30,9 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 		.state('login', {
 			url: '/login',
 			templateUrl: '/views/partials/login.html'
+		})
+		.state('list', {
+			url: '/list',
+			templateUrl: '/views/partials/list.html'
 		})
 });

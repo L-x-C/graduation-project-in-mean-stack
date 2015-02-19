@@ -1,1 +1,122 @@
 <div ng-include="'/views/partials/navbar.html'"></div>
+
+<div class="new" ng-controller="listCtrl">
+	<div class="list-header">
+		<md-content>
+			<md-list>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">房源类型</div>
+						<div class="md-tile-content">
+							<md-radio-group layout="row" ng-model="data.houseType">
+								<md-radio-button value="apartment">公寓</md-radio-button>
+								<md-radio-button value="independent">独立屋</md-radio-button>
+							</md-radio-group>
+						</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">房间类型</div>
+						<div class="md-tile-content">
+							<md-radio-group layout="row" ng-model="data.roomType">
+								<md-radio-button value="all">整套房子</md-radio-button>
+								<md-radio-button value="seperate">独立房间</md-radio-button>
+								<md-radio-button value="share">合住房间</md-radio-button>
+							</md-radio-group>
+						</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">月租金</div>
+						<div class="md-tile-content">
+							<md-input-container class="new-money">
+								<label>月租(￥)</label>
+								<input type="number" ng-model="data.money">
+							</md-input-container>
+						</div>
+					</md-item-content>
+				</md-item>
+				<div ng-show="more" class="list-more">
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">可住人数</div>
+							<div class="md-tile-content">
+								<div layout="row" layout-margin>
+									<md-slider step="1" flex="80" min="1" max="5" ng-model="data.number" class="md-warn" md-discrete>
+									</md-slider>
+									<input flex="20" type="number" ng-model="data.number" class="new-slider">
+								</div>
+							</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">面积大小</div>
+							<div class="md-tile-content">
+								<md-input-container class="new-money">
+									<label>平方米</label>
+									<input type="number" ng-model="data.area">
+								</md-input-container>
+							</div>
+						</md-item-content>
+					</md-item>
+				</div>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-content new-publish">
+							<md-button class="md-raised md-primary" ng-click="showMore()">更多筛选条件</md-button>
+						</div>
+					</md-item-content>
+				</md-item>
+			</md-list>
+		</md-content>
+	</div>
+	<div class="new-container">
+		<div class="list-container" layout-wrap layout>
+			<md-card>
+				<a href="">
+					<img src="/imgs/list/list.jpg">
+				</a>
+				<md-card-content>
+					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
+					<p>整套房子/公寓</p>
+					<p class="price">￥<span>381</span></p>
+				</md-card-content>
+			</md-card>
+			<md-card>
+				<a href="">
+					<img src="/imgs/list/list.jpg">
+				</a>
+				<md-card-content>
+					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
+					<p>整套房子/公寓</p>
+					<p class="price">￥<span>381</span></p>
+				</md-card-content>
+			</md-card>
+			<md-card>
+				<a href="">
+					<img src="/imgs/list/list.jpg">
+				</a>
+				<md-card-content>
+					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
+					<p>整套房子/公寓</p>
+					<p class="price">￥<span>381</span></p>
+				</md-card-content>
+			</md-card>
+			<md-card>
+				<a href="">
+					<img src="/imgs/list/list.jpg">
+				</a>
+				<md-card-content>
+					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
+					<p>整套房子/公寓</p>
+					<p class="price">￥<span>381</span></p>
+				</md-card-content>
+			</md-card>
+
+		</div>
+
+	</div>
+</div>
