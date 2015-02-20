@@ -486,13 +486,14 @@ footer .weibo:hover .icon-weibo:before {
   overflow: hidden;
 }
 .new .list-container md-card img {
+  -webkit-filter: grayscale(0.5);
   -webkit-transition: all linear 0.35s;
   -moz-transition: all linear 0.35s;
   -o-transition: all linear 0.35s;
   transition: all linear 0.35s;
 }
 .new .list-container md-card img:hover {
-  -webkit-filter: grayscale(0.8);
+  -webkit-filter: grayscale(0);
 }
 .new .list-container md-card-content {
   background: #fff;
