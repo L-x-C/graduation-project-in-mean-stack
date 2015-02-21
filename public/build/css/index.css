@@ -543,5 +543,34 @@ footer .weibo:hover .icon-weibo:before {
   background: #F5F5F5;
 }
 .detail-content .content-container {
-  width: 800px;
+  width: 655px;
+  margin-left: -140px;
+  padding-bottom: 25px;
+}
+.detail-content .content-about {
+  border: 1px solid #dce0e0;
+  background: #EDEFED;
+  padding: 25px 15px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.detail-content .content-detail {
+  border-top: 1px solid #dce0e0;
+  padding: 15px 0;
+}
+.detail-content .content-detail .content-detail_left {
+  width: 170px;
+  float: left;
+}
+.detail-content .content-detail .content-detail_right {
+  width: 485px;
+  float: left;
+}
+.detail-content .content-detail .content-detail_right p {
+  font-size: 14px;
+  width: 240px;
+  float: left;
+}
+.detail-content .content-detail .content-detail_right p strong {
+  margin-left: 5px;
 }

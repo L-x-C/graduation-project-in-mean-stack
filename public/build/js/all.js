@@ -34,5 +34,9 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 		.state('list', {
 			url: '/list',
 			templateUrl: '/views/partials/list.html'
+		})
+		.state('detail', {
+			url: '/detail',
+			templateUrl: '/views/partials/detail.html'
 		});
 });
