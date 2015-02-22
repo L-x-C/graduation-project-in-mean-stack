@@ -37,6 +37,7 @@ angular.module('myApp', ['ngMaterial','ui.router'])
 		})
 		.state('detail', {
 			url: '/detail',
-			templateUrl: '/views/partials/detail.html'
+			templateUrl: '/views/partials/detail.html',
+			controller: 'detailCtrl'
 		});
 });

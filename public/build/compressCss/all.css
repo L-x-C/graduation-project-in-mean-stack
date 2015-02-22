@@ -521,6 +521,7 @@ footer .weibo:hover .icon-weibo:before {
   background: url('/imgs/detail/bg.jpg');
   background-size: cover;
   background-position: 50% 50%;
+  position: relative;
 }
 .detail-summary {
   width: 100%;
@@ -532,6 +533,7 @@ footer .weibo:hover .icon-weibo:before {
 }
 .detail-summary .summmary-container {
   width: 800px;
+  position: relative;
 }
 .detail-summary .summmary-container .icon-heart {
   color: #ff5a5f;
@@ -557,6 +559,7 @@ footer .weibo:hover .icon-weibo:before {
 .detail-content .content-detail {
   border-top: 1px solid #dce0e0;
   padding: 15px 0;
+  overflow: hidden;
 }
 .detail-content .content-detail .content-detail_left {
   width: 170px;
@@ -573,6 +576,42 @@ footer .weibo:hover .icon-weibo:before {
 }
 .detail-content .content-detail .content-detail_right p strong {
   margin-left: 5px;
+}
+.detail-content .content-detail .content-detail_right .content-describe {
+  width: 100%;
+  font-size: 14px;
+}
+.detail-content img {
+  width: 100%;
+}
+.detail-contact {
+  position: fixed;
+  width: 215px;
+  bottom: 40%;
+  right: 0;
+}
+.detail-contact p {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: 24px;
+  color: #fff;
+  background: rgba(60, 63, 64, 0.9);
+}
+.detail-contact p span {
+  color: #fff;
+}
+.detail-contact .contact-button {
+  border-top: 1px dashed #fff;
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: rgba(60, 63, 64, 0.9);
+  color: #fff;
+  padding-left: 20px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 
