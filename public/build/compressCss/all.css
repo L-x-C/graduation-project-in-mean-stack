@@ -545,6 +545,7 @@ footer .weibo:hover .icon-weibo:before {
 .detail-content .content-container {
   width: 655px;
   margin-left: -140px;
+  padding-bottom: 25px;
 }
 .detail-content .content-about {
   border: 1px solid #dce0e0;
@@ -571,7 +572,7 @@ footer .weibo:hover .icon-weibo:before {
   float: left;
 }
 .detail-content .content-detail .content-detail_right p strong {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 
