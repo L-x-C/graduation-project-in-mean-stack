@@ -53,9 +53,34 @@
 				</p>
 			</div>
 		</div>
+		<div class="content-detail">
+			<img src="/imgs/detail/bg.jpg">
+			<img src="/imgs/detail/bg.jpg">
+			<img src="/imgs/detail/bg.jpg">
+		</div>
 	</div>
 </div>
 <div class="detail-contact">
 	<p>￥<span>3000</span></p>
 	<a class="contact-button">联系房东</a>
+</div>
+<div class="detail-comment">
+	<md-list layout="column">
+		<md-item ng-repeat="message in messages">
+			<md-item-content>
+				<div class="md-tile-left">
+					<img ng-src="{{message.face}}" class="face" alt="{{message.who}}">
+					<p>{{message.who}}</p>
+				</div>
+				<div class="md-tile-content">
+					<p>
+						{{message.notes}}
+					</p>
+					<p>
+						{{message.when}}
+					</p>
+				</div>
+			</md-item-content>
+		</md-item>
+	</md-list>
 </div>
