@@ -77,6 +77,28 @@
 				</md-item>
 				<md-item>
 					<md-item-content>
+						<div class="md-tile-left">卧室个数</div>
+							<div class="md-tile-content">
+								<md-input-container class="new-money">
+									<label>个</label>
+									<input type="number" ng-model="data.bedroom">
+								</md-input-container>
+							</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">卫生间个数</div>
+							<div class="md-tile-content">
+								<md-input-container class="new-money">
+									<label>个</label>
+									<input type="number" ng-model="data.wc">
+								</md-input-container>
+							</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
 						<div class="md-tile-left">月租金</div>
 							<div class="md-tile-content">
 								<md-input-container class="new-money">
@@ -111,6 +133,28 @@
 								<md-checkbox ng-model="data.special.bodyBuilder" class="md-warn">健身房</md-checkbox>
 								<md-checkbox ng-model="data.special.fireExtinguisher" class="md-warn">灭火器</md-checkbox>
 								<md-checkbox ng-model="data.special.barrierFree" class="md-warn">无障碍设施</md-checkbox>
+							</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">标题</div>
+							<div class="md-tile-content">
+								<md-input-container class="new-money">
+									<label>请输入标题</label>
+									<input ng-model="data.headline">
+								</md-input-container>
+							</div>
+					</md-item-content>
+				</md-item>
+				<md-item>
+					<md-item-content>
+						<div class="md-tile-left">简介</div>
+							<div class="md-tile-content">
+								<md-input-container class="new-money">
+									<label>请输入简介</label>
+									<textarea ng-model="data.description" md-maxlength="150"></textarea>
+								</md-input-container>
 							</div>
 					</md-item-content>
 				</md-item>

@@ -589,6 +589,7 @@ footer .weibo:hover .icon-weibo:before {
   width: 215px;
   bottom: 40%;
   right: 0;
+  z-index: 9;
 }
 .detail-contact p {
   height: 40px;
