@@ -1,5 +1,5 @@
 angular.module('myApp')
-	.controller('indexCtrl', function($scope,Auth){
+	.controller('indexCtrl', function($scope, Auth){
 		$scope.isLoggedIn = Auth.isLoggedIn();
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {

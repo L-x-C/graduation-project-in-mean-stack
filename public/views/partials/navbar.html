@@ -1,9 +1,12 @@
-<div class="navbar">
+<div class="navbar" ng-controller="navCtrl">
 	<nav>
 		<a ui-sref="/" class="nav-logo">LxC</a>
 		<div class="nav-right">
-			<a ui-sref="login" href="" class="nav-login">登陆</a>
-			<a ui-sref="signup" href="" class="nav-signup">注册</a>
+			<a href="" class="nav-login" ng-if="isLoggedIn">{{username}}</a>
+			<a ng-click="logOut()" href="" class="nav-login" ng-if="isLoggedIn">退出登录</a>
+
+			<a ui-sref="login" href="" class="nav-login" ng-if="!isLoggedIn">登陆</a>
+			<a ui-sref="signup" href="" class="nav-signup" ng-if="!isLoggedIn">注册</a>
 			<a href="" ui-sref="new">
 				<md-button class="md-raised md-primary">发布房源</md-button>
 			</a>
