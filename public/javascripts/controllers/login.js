@@ -1,4 +1,4 @@
 angular.module('myApp')
-.controller('loginCtrl', function($scope){
+	.controller('loginCtrl', function($scope){
 
-})
+	});

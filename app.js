@@ -3,6 +3,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var fs = require('fs');
 var bodyParser = require('body-parser');
+var session = require('cookie-session');
 var port = process.env.PORT || 3000;
 var app = express();
 
@@ -28,12 +29,20 @@ var walk = function(path) {
 };
 walk(models_path);
 
+app.set('views', path.join(__dirname, '/public/views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('view engine', 'html');
 app.engine('html', require('ejs').__express);
 
-app.set('views', path.join(__dirname, '/public/views'));
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyParser.urlencoded());
+app.use(session({
+	secret: 'lxc',
+	keys: ['user']
+}));
+
+
 
 require('./config/routes')(app);
 

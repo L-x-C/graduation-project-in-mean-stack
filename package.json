@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "bcrypt": "^0.8.1",
+    "cookie-session": "^1.1.0",
     "ejs": "^2.2.4",
     "gulp": "^3.8.11",
     "gulp-clean": "^0.3.1",
