@@ -6,6 +6,5 @@ angular.module('myApp')
 		};
 		House.get().success(function(res) {
 			$scope.houseData = res;
-			console.log($scope.houseData);
 		});
 	});
