@@ -2,8 +2,8 @@
 <div class="detail-bg"></div>
 <div class="detail-summary">
 	<div class="summmary-container">
-		<h1>市中心法租界趣味艺术老洋房Art French Concession</h1>
-		<p class="summary-address"><span>上海</span>,<span>杨浦区</span>,<span>国定东路200号</span></p>
+		<h1>{{data.headline}}</h1>
+		<p class="summary-address"><span>{{data.address.city}}</span>,<span>{{data.address.state}}</span>,<span>{{data.address.road}}</span></p>
 		<p class="summary-like"><span>99</span><i class="icon-heart"></i></p>
 	</div>
 </div>
@@ -18,10 +18,11 @@
 				<p>房源</p>
 			</div>
 			<div class="content-detail_right">
-				<p>房源类型<strong>公寓</strong></p>
-				<p>可住人数<strong>2</strong></p>
-				<p>卧室<strong>1</strong></p>
-				<p>卫生间<strong>1</strong></p>
+				<p>房源类型<strong>{{data.houseType}}</strong></p>
+				<p>房间类型<strong>{{data.roomType}}</strong></p>
+				<p>可住人数<strong>{{data.peopleNum}}</strong></p>
+				<p>卧室<strong>{{data.bedroom}}</strong></p>
+				<p>卫生间<strong>{{data.wc}}</strong></p>
 			</div>
 		</div>
 		<div class="content-detail">
@@ -29,12 +30,15 @@
 				<p>便利设施</p>
 			</div>
 			<div class="content-detail_right">
-				<p>网络</p>
-				<p>生活必需品</p>
-				<p>洗发水</p>
-				<p>空调</p>
-				<p>洗衣机</p>
-				<p>无线网络</p>
+				<p ng-repeat="facility in data.realFacilities">{{facility}}</p>
+			</div>
+		</div>
+		<div class="content-detail">
+			<div class="content-detail_left">
+				<p>特殊功能</p>
+			</div>
+			<div class="content-detail_right">
+				<p ng-repeat="special in data.realSpecials">{{special}}</p>
 			</div>
 		</div>
 		<div class="content-detail">
@@ -42,15 +46,7 @@
 				<p>描述</p>
 			</div>
 			<div class="content-detail_right">
-				<p class="content-describe">
-					房內有艺术画作、外文书籍、趣味设计款家具.您可以欣赏窗外綠茵，还可以享受帶天窗的浴室。
-
-					We have paintings 、English books and intersting design furnitures in the room.You can enjoy the shade trees around and a skylight bathroom.
-
-					这间房位于上海著名历史保护建筑之一的法租界街区的核心地带。这里环境宁静且小资。有许多著名酒吧和有趣的店铺和购物区，同时有许多设计师开放工作室。这个公寓充满了历史遗留的特有的细节和环境。
-
-					The apartment is located in one of Shanghai’s protected heritage lane houses. Located in the heart of the French Concession area, this property combines style & comfort, peace & quiet and accessibility to the popular bars as well as the most trendy dining and shopping spots in the city.
-				</p>
+				<p class="content-describe">{{data.description}}</p>
 			</div>
 		</div>
 		<div class="content-detail">
