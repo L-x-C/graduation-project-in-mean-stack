@@ -3,10 +3,12 @@ angular.module('myApp')
 
 		return {
 			publish: function(data) {
-				$http.post('/new', data)
-					.success(function() {
-						console.log('suc');
-					});
+				$http.post('/new', {
+					house: data
+				})
+				.success(function() {
+					console.log('suc');
+				});
 			}
 		}
 	});

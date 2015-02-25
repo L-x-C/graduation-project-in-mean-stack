@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var HouseSchema = new mongoose.Schema({
+	userId: String,
 	houseType: String,
 	roomType: String,
 	peopleNum: Number,
@@ -53,6 +54,7 @@ HouseSchema.pre('save', function(next) {
 	} else {
 		this.meta.updateAt = Date.now();
 	}
+	next();
 });
 
 module.exports = HouseSchema;

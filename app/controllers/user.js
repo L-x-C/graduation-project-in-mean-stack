@@ -12,14 +12,15 @@ exports.signup = function(req, res) {
 		}
 
 		if (user) {
-			return res.redirect('/signin');
+			return res.redirect('/#/login');
 		} else {
 			user = new User(_user);
 			user.save(function(err, user) {
 				if (err) {
 					console.log(err);
 				}
-
+				var jUser = JSON.stringify(user);
+				res.cookie('user', jUser);
 				res.redirect('/');
 			});
 		}

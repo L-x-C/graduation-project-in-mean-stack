@@ -8,6 +8,7 @@ angular.module('myApp')
 		$scope.publishHouse = function() {
 			if (Auth.isLoggedIn()) {
 				$scope.data.userId = Auth.get();
+				console.log($scope.data);
 				House.publish($scope.data);
 			} else {
 				Auth.needLogin();
