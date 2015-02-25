@@ -75,46 +75,17 @@
 	</div>
 	<div class="new-container">
 		<div class="list-container" layout-wrap layout>
-			<md-card>
+			<md-card ng-repeat="house in houseData">
 				<a href="" ui-sref="detail">
 					<img src="/imgs/list/list.jpg">
 				</a>
 				<md-card-content>
-					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
-					<p>整套房子/公寓</p>
-					<p class="price">￥<span>381</span></p>
+					<a href="">{{house.headline}}</a>
+					<p>{{house.houseType}}</p>
+					<p class="price">￥<span>{{house.money}}</span></p>
 				</md-card-content>
 			</md-card>
-			<md-card>
-				<a href="">
-					<img src="/imgs/list/list.jpg">
-				</a>
-				<md-card-content>
-					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
-					<p>整套房子/公寓</p>
-					<p class="price">￥<span>381</span></p>
-				</md-card-content>
-			</md-card>
-			<md-card>
-				<a href="">
-					<img src="/imgs/list/list.jpg">
-				</a>
-				<md-card-content>
-					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
-					<p>整套房子/公寓</p>
-					<p class="price">￥<span>381</span></p>
-				</md-card-content>
-			</md-card>
-			<md-card>
-				<a href="">
-					<img src="/imgs/list/list.jpg">
-				</a>
-				<md-card-content>
-					<a href="">市中心法租界趣味艺术老洋房Art French Concession</a>
-					<p>整套房子/公寓</p>
-					<p class="price">￥<span>381</span></p>
-				</md-card-content>
-			</md-card>
+
 
 		</div>
 
