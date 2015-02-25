@@ -6,166 +6,168 @@
 		<p>您可以通过出租您的房子赚钱</p>
 	</div>
 	<div class="new-container" ng-controller="newCtrl">
-		<md-content>
-			<md-list>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">房源类型</div>
-						<div class="md-tile-content">
-							<md-radio-group layout="row" ng-model="data.houseType">
-								<md-radio-button value="apartment">公寓</md-radio-button>
-								<md-radio-button value="independent">独立屋</md-radio-button>
-							</md-radio-group>
-						</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">房间类型</div>
-						<div class="md-tile-content">
-							<md-radio-group layout="row" ng-model="data.roomType">
-								<md-radio-button value="all">整套房子</md-radio-button>
-								<md-radio-button value="seperate">独立房间</md-radio-button>
-								<md-radio-button value="share">合住房间</md-radio-button>
-							</md-radio-group>
-						</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">可住人数</div>
+		<form ng-submit="publishHouse()">
+			<md-content>
+				<md-list>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">房源类型</div>
 							<div class="md-tile-content">
-								<div layout="row" layout-margin>
-									<md-slider step="1" flex="80" min="1" max="5" ng-model="data.number" class="md-warn" md-discrete>
-									</md-slider>
-									<input flex="20" type="number" ng-model="data.number" class="new-slider">
+								<md-radio-group layout="row" ng-model="data.houseType" required>
+									<md-radio-button value="apartment">公寓</md-radio-button>
+									<md-radio-button value="independent">独立屋</md-radio-button>
+								</md-radio-group>
+							</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">房间类型</div>
+							<div class="md-tile-content">
+								<md-radio-group layout="row" ng-model="data.roomType" required>
+									<md-radio-button value="all">整套房子</md-radio-button>
+									<md-radio-button value="seperate">独立房间</md-radio-button>
+									<md-radio-button value="share">合住房间</md-radio-button>
+								</md-radio-group>
+							</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">可住人数</div>
+								<div class="md-tile-content">
+									<div layout="row" layout-margin>
+										<md-slider step="1" flex="80" min="1" max="5" ng-model="data.peopleNum" class="md-warn" md-discrete >
+										</md-slider>
+										<input flex="20" type="number" ng-model="data.peopleNum" class="new-slider" required>
+									</div>
 								</div>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">所在地址</div>
-							<div class="md-tile-content">
-								<div layout="row" layout-margin>
-									<md-input-container flex>
-										<label>省/直辖市</label>
-										<input ng-model="data.address.city">
-									</md-input-container>
-									<md-input-container flex>
-										<label>区/县</label>
-										<input ng-model="data.address.state">
-									</md-input-container>
-									<md-input-container flex>
-										<label>路</label>
-										<input ng-model="data.address.road">
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">所在地址</div>
+								<div class="md-tile-content">
+									<div layout="row" layout-margin>
+										<md-input-container flex>
+											<label>省/直辖市</label>
+											<input ng-model="data.address.city" required>
+										</md-input-container>
+										<md-input-container flex>
+											<label>区/县</label>
+											<input ng-model="data.address.state" required>
+										</md-input-container>
+										<md-input-container flex>
+											<label>路</label>
+											<input ng-model="data.address.road" required>
+										</md-input-container>
+									</div>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">面积大小</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>平方米</label>
+										<input type="number" ng-model="data.area" required>
 									</md-input-container>
 								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">卧室个数</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>个</label>
+										<input type="number" ng-model="data.bedroom" required>
+									</md-input-container>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">卫生间个数</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>个</label>
+										<input type="number" ng-model="data.wc" required>
+									</md-input-container>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">月租金</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>月租(￥)</label>
+										<input type="number" ng-model="data.money" required>
+									</md-input-container>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">便利设施</div>
+								<div class="md-tile-content">
+									<md-checkbox ng-model="data.facilities.necessary" class="md-warn">生活必需品</md-checkbox>
+									<md-checkbox ng-model="data.facilities.tv" class="md-warn">电视</md-checkbox>
+									<md-checkbox ng-model="data.facilities.airConditioner" class="md-warn">空调</md-checkbox>
+									<md-checkbox ng-model="data.facilities.heat" class="md-warn">暖气</md-checkbox>
+									<md-checkbox ng-model="data.facilities.kitchen" class="md-warn">厨房</md-checkbox>
+									<md-checkbox ng-model="data.facilities.wifi" class="md-warn">无线网络</md-checkbox>
+									<md-checkbox ng-model="data.facilities.washer" class="md-warn">洗衣机</md-checkbox>
+									<md-checkbox ng-model="data.facilities.bathroom" class="md-warn">浴室</md-checkbox>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">特殊功能</div>
+								<div class="md-tile-content">
+									<md-checkbox ng-model="data.special.smoking" class="md-warn">允许吸烟</md-checkbox>
+									<md-checkbox ng-model="data.special.pets" class="md-warn">允许养宠物</md-checkbox>
+									<md-checkbox ng-model="data.special.party" class="md-warn">允许举办派对</md-checkbox>
+									<md-checkbox ng-model="data.special.bodyBuilder" class="md-warn">健身房</md-checkbox>
+									<md-checkbox ng-model="data.special.fireExtinguisher" class="md-warn">灭火器</md-checkbox>
+									<md-checkbox ng-model="data.special.barrierFree" class="md-warn">无障碍设施</md-checkbox>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">标题</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>请输入标题</label>
+										<input ng-model="data.headline" required>
+									</md-input-container>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-left">简介</div>
+								<div class="md-tile-content">
+									<md-input-container class="new-money">
+										<label>请输入简介</label>
+										<textarea ng-model="data.description" md-maxlength="150" required></textarea>
+									</md-input-container>
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
+							<div class="md-tile-content new-publish">
+								<md-button class="md-raised md-primary">发布</md-button>
 							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">面积大小</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>平方米</label>
-									<input type="number" ng-model="data.area">
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">卧室个数</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>个</label>
-									<input type="number" ng-model="data.bedroom">
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">卫生间个数</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>个</label>
-									<input type="number" ng-model="data.wc">
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">月租金</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>月租(￥)</label>
-									<input type="number" ng-model="data.money">
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">便利设施</div>
-							<div class="md-tile-content">
-								<md-checkbox ng-model="data.facilities.necessary" class="md-warn">生活必需品</md-checkbox>
-								<md-checkbox ng-model="data.facilities.tv" class="md-warn">电视</md-checkbox>
-								<md-checkbox ng-model="data.facilities.airConditioner" class="md-warn">空调</md-checkbox>
-								<md-checkbox ng-model="data.facilities.heat" class="md-warn">暖气</md-checkbox>
-								<md-checkbox ng-model="data.facilities.kitchen" class="md-warn">厨房</md-checkbox>
-								<md-checkbox ng-model="data.facilities.wifi" class="md-warn">无线网络</md-checkbox>
-								<md-checkbox ng-model="data.facilities.washer" class="md-warn">洗衣机</md-checkbox>
-								<md-checkbox ng-model="data.facilities.bathroom" class="md-warn">浴室</md-checkbox>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">特殊功能</div>
-							<div class="md-tile-content">
-								<md-checkbox ng-model="data.special.smoking" class="md-warn">允许吸烟</md-checkbox>
-								<md-checkbox ng-model="data.special.pets" class="md-warn">允许养宠物</md-checkbox>
-								<md-checkbox ng-model="data.special.party" class="md-warn">允许举办派对</md-checkbox>
-								<md-checkbox ng-model="data.special.bodyBuilder" class="md-warn">健身房</md-checkbox>
-								<md-checkbox ng-model="data.special.fireExtinguisher" class="md-warn">灭火器</md-checkbox>
-								<md-checkbox ng-model="data.special.barrierFree" class="md-warn">无障碍设施</md-checkbox>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">标题</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>请输入标题</label>
-									<input ng-model="data.headline">
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-left">简介</div>
-							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>请输入简介</label>
-									<textarea ng-model="data.description" md-maxlength="150"></textarea>
-								</md-input-container>
-							</div>
-					</md-item-content>
-				</md-item>
-				<md-item>
-					<md-item-content>
-						<div class="md-tile-content new-publish">
-							<md-button class="md-raised md-primary">发布</md-button>
-						</div>
-					</md-item-content>
-				</md-item>
-			</md-list>
-		</md-content>
+						</md-item-content>
+					</md-item>
+				</md-list>
+			</md-content>
+		</form>
 	</div>
 </div>

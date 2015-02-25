@@ -1,4 +1,5 @@
 var User = require('../app/controllers/user');
+var House = require('../app/controllers/house');
 
 module.exports = function(app) {
 	// Index
@@ -9,5 +10,7 @@ module.exports = function(app) {
 	// User
 	app.post('/user/signup', User.signup);
 	app.post('/user/login', User.login);
-	app.get('/logData', User.logData);
+
+	//House
+	app.post('/new', House.publish);
 }

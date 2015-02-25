@@ -13,6 +13,12 @@ angular.module('myApp')
 			logOut: function() {
 				$cookieStore.remove('user');
 				location.reload();
+			},
+			needLogin: function() {
+				window.location.href = '/signin';
+			},
+			get: function() {
+				return $rootScope.currentUser._id;
 			}
-		}
+		};
 	});

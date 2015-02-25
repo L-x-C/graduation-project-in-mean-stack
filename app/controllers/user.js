@@ -58,7 +58,3 @@ exports.login = function(req, res) {
 		});
 	});
 };
-
-exports.logData = function(req,res) {
-
-}

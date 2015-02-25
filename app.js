@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').__express);
 
-
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(session({
 	secret: 'lxc',
