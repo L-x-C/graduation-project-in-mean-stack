@@ -15,6 +15,7 @@ angular.module('myApp')
 			}
 		};
 
+		$scope.data.imgUrl = [];
 		$scope.uploadInfo = '拖动图片至此或单击上传';
 
 		$scope.$watch('files', function() {
@@ -32,7 +33,7 @@ angular.module('myApp')
 						var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
 						$scope.uploadInfo = progressPercentage + '% ';
 					}).success(function(data, status, headers, config) {
-						$scope.data.imgUrl = data.file.path.split('\\').slice(1).join('/');
+						$scope.data.imgUrl.push(data.file.path.split('\\').slice(1).join('/'));
 					});
 				}
 			}

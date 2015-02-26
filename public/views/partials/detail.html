@@ -1,5 +1,5 @@
 <div ng-include="'/views/partials/navbar.html'"></div>
-<div class="detail-bg" style="background: url('{{data.imgUrl}}');background-size: cover;background-position: 50% 50%;"></div>
+<div class="detail-bg" style="background: url('{{data.imgUrl[0]}}');background-size: cover;background-position: 50% 50%;"></div>
 <div class="detail-summary">
 	<div class="summmary-container">
 		<h1>{{data.headline}}</h1>
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div class="content-detail">
-			<img src="{{data.imgUrl}}">
+			<img ng-repeat="imgUrl in data.imgUrl" src="{{imgUrl}}">
 		</div>
 	</div>
 </div>
