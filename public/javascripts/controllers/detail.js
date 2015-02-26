@@ -33,6 +33,6 @@ angular.module('myApp')
 		});
 		$scope.call = '联系房东';
 		$scope.getPhone = function() {
-			$scope.call = $scope.data.phone;
+			$scope.call = 'tel: ' + $scope.data.phone;
 		}
 	});
