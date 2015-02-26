@@ -3,7 +3,6 @@ var House = mongoose.model('House');
 
 exports.publish = function(req, res) {
 	var _house = req.body.house;
-	console.log(_house);
 	house = new House(_house);
 	house.save(function(err) {
 		if (err) {
