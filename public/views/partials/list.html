@@ -77,7 +77,7 @@
 		<div class="list-container" layout-wrap layout>
 			<md-card ng-repeat="house in houseData.slice().reverse()">
 				<a href="" ui-sref="detail({id: house._id})">
-					<img src="/imgs/list/list.jpg">
+					<img src="{{house.imgUrl}}">
 				</a>
 				<md-card-content>
 					<a href="">{{house.headline}}</a>

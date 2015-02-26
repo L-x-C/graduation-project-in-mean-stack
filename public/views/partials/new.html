@@ -161,6 +161,16 @@
 					</md-item>
 					<md-item>
 						<md-item-content>
+							<div class="md-tile-left">上传图片</div>
+								<div class="md-tile-content">
+										<div ng-file-drop ng-file-select ng-model="files" class="drop-box" drag-over-class="dragover" ng-multiple="true"allow-dir="true" accept=".jpg,.png,.pdf">
+											{{uploadInfo}}
+										</div>		
+								</div>
+						</md-item-content>
+					</md-item>
+					<md-item>
+						<md-item-content>
 							<div class="md-tile-left">联系方式</div>
 								<div class="md-tile-content">
 									<md-input-container class="new-money">

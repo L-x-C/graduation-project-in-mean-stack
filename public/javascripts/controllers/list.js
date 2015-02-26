@@ -9,5 +9,6 @@ angular.module('myApp')
 			angular.forEach($scope.houseData, function(value,key) {
 				House.trans(value);
 			})
+			console.log($scope.houseData);
 		});
 	});

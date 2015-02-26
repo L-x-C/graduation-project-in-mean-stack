@@ -3,7 +3,7 @@
  *
  * Description
  */
-angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies'])
+angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpload'])
 .config(function($mdThemingProvider, $stateProvider, $urlRouterProvider) {
 	// configure a dark theme
 	$mdThemingProvider.theme('docs-dark', 'default')
@@ -36,7 +36,7 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies'])
 			templateUrl: '/views/partials/list.html'
 		})
 		.state('detail', {
-			url: '/detail',
+			url: '/detail/:id',
 			templateUrl: '/views/partials/detail.html',
 			controller: 'detailCtrl'
 		});

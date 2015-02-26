@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var session = require('cookie-session');
+var multer  = require('multer');
 var port = process.env.PORT || 3000;
 var app = express();
 
@@ -41,7 +42,7 @@ app.use(session({
 	secret: 'lxc',
 	keys: ['user']
 }));
-
+app.use(multer({ dest: './public/uploads/houseImgs'}));
 
 
 require('./config/routes')(app);

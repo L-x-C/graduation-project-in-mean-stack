@@ -23,3 +23,6 @@ exports.getDetail = function(req, res) {
 		res.send(data);
 	})
 };
+exports.saveImg = function(req, res) {
+	res.send(req.files);
+};

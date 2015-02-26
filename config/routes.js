@@ -15,4 +15,6 @@ module.exports = function(app) {
 	app.post('/new', House.publish);
 	app.get('/getHouse', House.get);
 	app.post('/getHouseDetail', House.getDetail);
+	app.post('/upload/imgs', House.saveImg);
+
 }

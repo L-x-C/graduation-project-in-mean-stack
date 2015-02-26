@@ -10,6 +10,21 @@ h2,
 p {
   margin: 0;
 }
+.drop-box {
+  background: #f8f8f8;
+  border: 5px dashed #dddddd;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  width: 200px;
+  height: 65px;
+  line-height: 54px;
+  color: #B6B6B6;
+  text-align: center;
+  margin-left: 20px;
+}
 header {
   position: relative;
   overflow: hidden;
@@ -486,6 +501,8 @@ footer .weibo:hover .icon-weibo:before {
   overflow: hidden;
 }
 .new .list-container md-card img {
+  width: 450px;
+  height: 300px;
   -webkit-filter: grayscale(0.5);
   -webkit-transition: all linear 0.35s;
   -moz-transition: all linear 0.35s;
@@ -518,9 +535,6 @@ footer .weibo:hover .icon-weibo:before {
 .detail-bg {
   width: 100%;
   height: 700px;
-  background: url('/imgs/detail/bg.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
   position: relative;
 }
 .detail-summary {

@@ -3,7 +3,7 @@
  *
  * Description
  */
-angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies'])
+angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpload'])
 .config(function($mdThemingProvider, $stateProvider, $urlRouterProvider) {
 	// configure a dark theme
 	$mdThemingProvider.theme('docs-dark', 'default')

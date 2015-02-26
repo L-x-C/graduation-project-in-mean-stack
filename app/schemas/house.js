@@ -35,6 +35,7 @@ var HouseSchema = new mongoose.Schema({
 	headline: String,
 	description: String,
 	phone: Number,
+	imgUrl: String,
 	meta: {
 		createAt: {
 			type: Date,
