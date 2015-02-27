@@ -32,7 +32,7 @@ walk(models_path);
 
 app.set('views', path.join(__dirname, '/public/views'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/houseImgs', express.static(path.join(__dirname, '/uploads/houseImgs')));
 
 app.set('view engine', 'html');
 app.engine('html', require('ejs').__express);
@@ -43,7 +43,7 @@ app.use(session({
 	secret: 'lxc',
 	keys: ['user']
 }));
-app.use(multer({ dest: './public/uploads/houseImgs'}));
+app.use(multer({ dest: 'uploads/houseImgs'}));
 
 
 require('./config/routes')(app);

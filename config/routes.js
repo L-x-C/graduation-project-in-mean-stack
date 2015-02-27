@@ -1,5 +1,6 @@
 var User = require('../app/controllers/user');
 var House = require('../app/controllers/house');
+var path = require('path');
 
 module.exports = function(app) {
 	// Index
@@ -19,4 +20,5 @@ module.exports = function(app) {
 
 	//Search
 	app.post('/search', House.search);
+
 }
