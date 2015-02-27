@@ -4,7 +4,7 @@ angular.module('myApp')
 		$scope.showMore = function() {
 			$scope.more = !$scope.more;
 		};
-		console.log($stateParams);
+		
 		if ($stateParams.state) {
 			House.searchState($stateParams.state).success(function(res) {
 				$scope.houseData = res;
@@ -19,6 +19,15 @@ angular.module('myApp')
 					House.trans(value);
 				});
 			});
+			console.log("b");
+		} else {
+			House.get().success(function(res) {
+				$scope.houseData = res;
+				angular.forEach($scope.houseData, function(value,key) {
+					House.trans(value);
+				});
+			});
+			console.log("c");
 		}
 		// House.get().success(function(res) {
 		// 	$scope.houseData = res;
