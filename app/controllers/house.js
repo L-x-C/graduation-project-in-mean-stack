@@ -27,8 +27,9 @@ exports.saveImg = function(req, res) {
 	res.send(req.files);
 };
 exports.search = function(req, res) {
-	var city = req.body.city;
-	House.find({address: {city: '上海市','state':'杨浦区','road':'国定东路200号'}}, function(err, data) {
-		console.log(data);
+	var where = req.body.where;
+	var number = parseInt(req.body.number);
+	House.find({'address.city': where, 'peopleNum': number}, function(err, data) {
+			console.log(data);
 	})
 };

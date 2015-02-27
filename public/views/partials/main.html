@@ -54,13 +54,13 @@
 			<md-content md-theme="docs-dark" class="md-padding " layout="row" layout-sm="column" style="font-size:1.2em" layout-margin>
 				<md-input-container>
 					<label>您想住哪里</label>
-					<input >
+					<input ng-model="where">
 				</md-input-container>
 				<md-input-container>
 					<label>几位房客</label>
-					<input>
+					<input ng-model="peopleNumber">
 				</md-input-container>
-				<md-button class="md-raised md-warn" ng-click="search()">搜索</md-button>
+				<md-button class="md-raised md-warn" ng-click="searchWhereNumber()">搜索</md-button>
 			</md-content>
 		</div>
 	</header>

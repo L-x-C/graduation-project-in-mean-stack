@@ -15,7 +15,8 @@ angular.module('myApp')
 		};
 
 		//search
-		$scope.search = function() {
-			House.search();
+		$scope.searchWhereNumber = function() {
+			// console.log($scope.where + $scope.peopleNumber);
+			House.search($scope.where,$scope.peopleNumber);
 		};
 	});

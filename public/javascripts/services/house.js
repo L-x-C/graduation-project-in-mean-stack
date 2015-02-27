@@ -19,9 +19,10 @@ angular.module('myApp')
 			getDetail: function(id) {
 				return $http.post('/getHouseDetail', {id: id});
 			},
-			search: function() {
+			search: function(where,number) {
 				$http.post('/search', {
-					city: '上海市'
+					where: where,
+					number: number
 				}).success(function(res) {
 					console.log(res);
 				});
