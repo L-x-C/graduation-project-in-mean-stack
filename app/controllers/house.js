@@ -26,3 +26,9 @@ exports.getDetail = function(req, res) {
 exports.saveImg = function(req, res) {
 	res.send(req.files);
 };
+exports.search = function(req, res) {
+	var city = req.body.city;
+	House.find({address: {city: '上海市'}}, function(err, data) {
+		console.log(data);
+	})
+}

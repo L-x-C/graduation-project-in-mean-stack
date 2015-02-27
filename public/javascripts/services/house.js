@@ -19,6 +19,13 @@ angular.module('myApp')
 			getDetail: function(id) {
 				return $http.post('/getHouseDetail', {id: id});
 			},
+			search: function() {
+				$http.post('/search', {
+					city: '上海市'
+				}).success(function(res) {
+					console.log(res);
+				})
+			},
 			trans: function(data) {
 				switch (data.houseType) {
 					case 'apartment':

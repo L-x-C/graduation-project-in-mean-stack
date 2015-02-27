@@ -15,7 +15,7 @@ angular.module('myApp')
 				location.reload();
 			},
 			needLogin: function() {
-				window.location.href = '/signin';
+				window.location.href = '/#/signin';
 			},
 			get: function() {
 				return $rootScope.currentUser._id;

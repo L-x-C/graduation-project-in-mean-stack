@@ -501,6 +501,8 @@ footer .weibo:hover .icon-weibo:before {
   overflow: hidden;
 }
 .new .list-container md-card img {
+  width: 450px;
+  height: 300px;
   -webkit-filter: grayscale(0.5);
   -webkit-transition: all linear 0.35s;
   -moz-transition: all linear 0.35s;
@@ -533,9 +535,6 @@ footer .weibo:hover .icon-weibo:before {
 .detail-bg {
   width: 100%;
   height: 700px;
-  background: url('/imgs/detail/bg.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
   position: relative;
 }
 .detail-summary {
