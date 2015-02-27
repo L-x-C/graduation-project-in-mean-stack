@@ -4,7 +4,7 @@ angular.module('myApp')
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {
 			Auth.logOut();
-		}
+		};
 
 		$scope.isShow = false;
 		$scope.showHowToUse = function() {
@@ -17,5 +17,5 @@ angular.module('myApp')
 		//search
 		$scope.search = function() {
 			House.search();
-		}
+		};
 	});

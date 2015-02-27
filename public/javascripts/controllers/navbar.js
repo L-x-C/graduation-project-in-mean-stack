@@ -4,5 +4,5 @@ angular.module('myApp')
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {
 			Auth.logOut();
-		}
+		};
 	});

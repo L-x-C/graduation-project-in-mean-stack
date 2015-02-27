@@ -9,7 +9,7 @@ angular.module('myApp')
 				.success(function(res) {
 					if (res === 'suc') {
 						alert("发布成功");
-						window.location.href="/";
+						window.location.href="/#/list";
 					}
 				});
 			},
@@ -24,7 +24,7 @@ angular.module('myApp')
 					city: '上海市'
 				}).success(function(res) {
 					console.log(res);
-				})
+				});
 			},
 			trans: function(data) {
 				switch (data.houseType) {
@@ -34,7 +34,7 @@ angular.module('myApp')
 					case 'independent':
 						data.houseType = '独立屋';
 						break;
-				};
+				}
 				switch (data.roomType) {
 					case 'all':
 						data.roomType = '整套房子';
@@ -48,8 +48,8 @@ angular.module('myApp')
 				}
 
 				data.realFacilities = [];
-				for (var index in data.facilities) {
-					switch (index) {
+				for (var facility in data.facilities) {
+					switch (facility) {
 						case 'necessary':
 							data.realFacilities.push('生活必需品');
 							break;
@@ -78,8 +78,8 @@ angular.module('myApp')
 				}
 
 				data.realSpecials = [];
-				for (var index in data.special) {
-					switch (index) {
+				for (var special in data.special) {
+					switch (special) {
 						case 'smoking':
 							data.realSpecials.push('允许吸烟');
 							break;
@@ -101,5 +101,5 @@ angular.module('myApp')
 					}
 				}
 			}
-		}
+		};
 	});

@@ -16,7 +16,7 @@ gulp.task('build-less', function() {
 });
 //jshint
 gulp.task('lint', function() {
-	gulp.src('public/javascripts/*.js')
+	gulp.src('public/javascripts/*/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
 });
@@ -34,7 +34,7 @@ gulp.task('stylesheets', ['build-less'], function() {
 
 // 合并，压缩js文件
 gulp.task('javascripts', function() {
-	gulp.src('public/javascripts/*.js')
+	gulp.src('public/javascripts/*/*.js')
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('public/build/js'))
 		.pipe(rename({

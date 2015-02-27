@@ -8,6 +8,6 @@ angular.module('myApp')
 			$scope.houseData = res;
 			angular.forEach($scope.houseData, function(value,key) {
 				House.trans(value);
-			})
+			});
 		});
 	});
