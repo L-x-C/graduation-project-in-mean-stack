@@ -19,12 +19,14 @@ angular.module('myApp')
 			getDetail: function(id) {
 				return $http.post('/getHouseDetail', {id: id});
 			},
-			search: function(where,number) {
-				$http.post('/search', {
-					where: where,
-					number: number
-				}).success(function(res) {
-					console.log(res);
+			searchState: function(state) {
+				return $http.post('/searchState', {
+					state: state
+				});
+			},
+			searchCity: function(city) {
+				return $http.post('/searchCity', {
+					city: city
 				});
 			},
 			trans: function(data) {

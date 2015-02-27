@@ -20,5 +20,6 @@ module.exports = function(app) {
 
 	//Search
 	app.post('/search', House.search);
+	app.post('/searchState', House.searchState);
 
 }

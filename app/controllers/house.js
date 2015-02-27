@@ -33,3 +33,15 @@ exports.search = function(req, res) {
 			console.log(data);
 	})
 };
+exports.searchState = function(req, res) {
+	var state = req.body.state;
+	House.find({'address.state': state}, function(err, data) {
+		res.send(data);
+	})
+};
+exports.searchCity = function(req, res) {
+	var city = req.body.city;
+	House.find({'address.city': city}, function(err, data) {
+		res.send(data);
+	})
+};

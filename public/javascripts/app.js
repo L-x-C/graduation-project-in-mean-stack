@@ -80,6 +80,32 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 				}]
 			}
 		})
+		.state('city', {
+			url: '/list/city/:city',
+			templateUrl: '/views/partials/list.html',
+			resolve: {
+				data: ['$q', function($q) {
+					var defer = $q.defer();
+					setTimeout(function() {
+						defer.resolve('page4');
+					}, 1000);
+					return defer.promise;
+				}]
+			}
+		})
+		.state('state', {
+			url: '/list/state/:state',
+			templateUrl: '/views/partials/list.html',
+			resolve: {
+				data: ['$q', function($q) {
+					var defer = $q.defer();
+					setTimeout(function() {
+						defer.resolve('page4');
+					}, 1000);
+					return defer.promise;
+				}]
+			}
+		})
 		.state('detail', {
 			url: '/detail/:id',
 			templateUrl: '/views/partials/detail.html',
