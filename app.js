@@ -39,7 +39,7 @@ app.engine('html', require('ejs').__express);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extnded: true
+	extended: true
 }));
 app.use(session({
 	secret: 'lxc',
