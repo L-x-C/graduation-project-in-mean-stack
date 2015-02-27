@@ -38,7 +38,9 @@ app.set('view engine', 'html');
 app.engine('html', require('ejs').__express);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+	extnded: true
+}));
 app.use(session({
 	secret: 'lxc',
 	keys: ['user']
