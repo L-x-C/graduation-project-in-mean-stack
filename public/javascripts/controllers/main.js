@@ -1,5 +1,5 @@
 angular.module('myApp')
-	.controller('indexCtrl', function($scope, Auth, House){
+	.controller('indexCtrl', function($scope, Auth, House, $state){
 		$scope.isLoggedIn = Auth.isLoggedIn();
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {
@@ -15,8 +15,7 @@ angular.module('myApp')
 		};
 
 		//search
-		$scope.searchWhereNumber = function() {
-			// console.log($scope.where + $scope.peopleNumber);
-			House.search($scope.where,$scope.peopleNumber);
+		$scope.search = function() {
+			$state.go('list',{city: $scope.where,peopleNumber: $scope.peopleNumber});
 		};
 	});
