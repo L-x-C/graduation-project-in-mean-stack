@@ -13,21 +13,11 @@ angular.module('myApp')
 					}
 				});
 			},
-			get: function() {
-				return $http.get('/getHouse');
-			},
 			getDetail: function(id) {
 				return $http.post('/getHouseDetail', {id: id});
 			},
-			searchState: function(state) {
-				return $http.post('/searchState', {
-					state: state
-				});
-			},
-			searchCity: function(city) {
-				return $http.post('/searchCity', {
-					city: city
-				});
+			search: function(info) {
+				return $http.post('/search', info);
 			},
 			trans: function(data) {
 				switch (data.houseType) {

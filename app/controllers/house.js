@@ -12,11 +12,6 @@ exports.publish = function(req, res) {
 		}
 	});
 };
-exports.get = function(req, res) {
-	House.find({}, function(err, data) {
-		res.send(data);
-	})
-};
 exports.getDetail = function(req, res) {
 	var houseId = req.body.id;
 	House.findById(houseId, function(err, data) {
@@ -27,21 +22,21 @@ exports.saveImg = function(req, res) {
 	res.send(req.files);
 };
 exports.search = function(req, res) {
-	var where = req.body.where;
-	var number = parseInt(req.body.number);
-	House.find({'address.city': where, 'peopleNum': number}, function(err, data) {
-			console.log(data);
-	})
-};
-exports.searchState = function(req, res) {
-	var state = req.body.state;
-	House.find({'address.state': state}, function(err, data) {
-		res.send(data);
-	})
-};
-exports.searchCity = function(req, res) {
-	var city = req.body.city;
-	House.find({'address.city': city}, function(err, data) {
+	var obj = req.body;
+	var key,
+		searchData = {};
+	for (key in obj) {
+		if (obj[key] !== '') {
+			if (key === 'city') {
+				searchData['address.city'] = obj[key];
+			} else if (key === 'state') {
+				searchData['address.state'] = obj[key];
+			} else {
+				searchData['peopleNum'] = obj[key];
+			}
+		}
+	}
+	House.find(searchData, function(err, data) {
 		res.send(data);
 	})
 };

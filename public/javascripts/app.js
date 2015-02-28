@@ -68,33 +68,7 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 			}
 		})
 		.state('list', {
-			url: '/list',
-			templateUrl: '/views/partials/list.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page4');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
-		})
-		.state('city', {
-			url: '/list/city/:city',
-			templateUrl: '/views/partials/list.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page4');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
-		})
-		.state('state', {
-			url: '/list/state/:state',
+			url: '/list/:state:city:peopleNum',
 			templateUrl: '/views/partials/list.html',
 			resolve: {
 				data: ['$q', function($q) {
