@@ -16,6 +16,6 @@ angular.module('myApp')
 
 		//search
 		$scope.search = function() {
-			$state.go('list',{city: $scope.where,peopleNumber: $scope.peopleNumber});
+			$state.go('list',{where: $scope.where, peopleNumber: $scope.peopleNumber});
 		};
 	});

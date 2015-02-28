@@ -68,7 +68,7 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 			}
 		})
 		.state('list', {
-			url: '/list/:state:city:peopleNum',
+			url: '/list/:state:city:peopleNum:where',
 			templateUrl: '/views/partials/list.html',
 			resolve: {
 				data: ['$q', function($q) {

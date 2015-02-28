@@ -1,5 +1,5 @@
 angular.module('myApp')
-	.factory('House', function($http) {
+	.factory('House', function($http, $state) {
 
 		return {
 			publish: function(data) {
@@ -9,7 +9,7 @@ angular.module('myApp')
 				.success(function(res) {
 					if (res === 'suc') {
 						alert("发布成功");
-						window.location.href="/#/list";
+						$state.go('list');
 					}
 				});
 			},

@@ -36,7 +36,28 @@ exports.search = function(req, res) {
 			}
 		}
 	}
-	House.find(searchData, function(err, data) {
-		res.send(data);
-	})
+	if (obj.where !== '') {
+		var location = [];
+		var locationIndex = [];
+		var keyWord = obj.where;
+		var result = [];
+		House.find({}, function(err, data) {
+			data.forEach(function(obj) {
+				location.push(obj.address.city + obj.address.state + obj.address.road);
+			});
+			location.forEach(function(value, index) {
+				if (value.indexOf(keyWord) !== -1) {
+					locationIndex.push(index);
+				}
+			});
+			locationIndex.forEach(function(value) {
+				result.push(data[value]);
+			});
+			res.send(result);
+		});
+	} else {
+		House.find(searchData, function(err, data) {
+			res.send(data);
+		})
+	}
 };
