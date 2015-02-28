@@ -31,7 +31,7 @@ exports.search = function(req, res) {
 				searchData['address.city'] = obj[key];
 			} else if (key === 'state') {
 				searchData['address.state'] = obj[key];
-			} else {
+			} else if (key === 'peopleNum') {
 				searchData['peopleNum'] = obj[key];
 			}
 		}
@@ -41,7 +41,7 @@ exports.search = function(req, res) {
 		var locationIndex = [];
 		var keyWord = obj.where;
 		var result = [];
-		House.find({}, function(err, data) {
+		House.find(searchData, function(err, data) {
 			data.forEach(function(obj) {
 				location.push(obj.address.city + obj.address.state + obj.address.road);
 			});
@@ -57,7 +57,7 @@ exports.search = function(req, res) {
 		});
 	} else {
 		House.find(searchData, function(err, data) {
-			res.send(data);
+			res.send(data);	
 		})
 	}
 };
