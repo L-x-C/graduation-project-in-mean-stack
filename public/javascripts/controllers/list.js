@@ -1,7 +1,11 @@
 angular.module('myApp')
 	.controller('listCtrl', function($scope, House, $stateParams, $state){
 		for (var i in $stateParams) {
-			$scope[i] = $stateParams[i];
+			if (i === 'peopleNum') {
+				$scope[i] = parseInt($stateParams[i]);
+			} else {
+				$scope[i] = $stateParams[i];
+			}
 		}
 		$scope.more =false;
 		$scope.showMore = function() {
@@ -39,6 +43,13 @@ angular.module('myApp')
 		$scope.$watch('moneyRange', function(newValue, oldValue) {
 			if (newValue) {
 				$stateParams.moneyRange = newValue;
+				$state.go('list',$stateParams);
+			}
+		});
+
+		$scope.$watch('peopleNum', function(newValue, oldValue) {
+			if (newValue) {
+				$stateParams.peopleNum = newValue;
 				$state.go('list',$stateParams);
 			}
 		});

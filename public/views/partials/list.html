@@ -46,9 +46,9 @@
 							<div class="md-tile-left">可住人数</div>
 							<div class="md-tile-content">
 								<div layout="row" layout-margin>
-									<md-slider step="1" flex="80" min="1" max="5" ng-model="peopleNumber" class="md-warn" md-discrete>
+									<md-slider step="1" flex="80" min="1" max="5" ng-model="peopleNum" class="md-warn" md-discrete>
 									</md-slider>
-									<input flex="20" type="number" ng-model="peopleNumber" class="new-slider">
+									<input flex="20" type="number" ng-model="peopleNum" class="new-slider">
 								</div>
 							</div>
 						</md-item-content>
@@ -57,10 +57,12 @@
 						<md-item-content>
 							<div class="md-tile-left">面积大小</div>
 							<div class="md-tile-content">
-								<md-input-container class="new-money">
-									<label>平方米</label>
-									<input type="number" ng-model="area">
-								</md-input-container>
+								<md-radio-group layout="row" ng-model="areaRange">
+									<md-radio-button value="1">0~50</md-radio-button>
+									<md-radio-button value="2">50~100</md-radio-button>
+									<md-radio-button value="3">100~150</md-radio-button>
+									<md-radio-button value="4">150以上</md-radio-button>
+								</md-radio-group>
 							</div>
 						</md-item-content>
 					</md-item>
