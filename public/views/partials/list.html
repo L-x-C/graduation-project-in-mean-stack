@@ -29,12 +29,14 @@
 				</md-item>
 				<md-item>
 					<md-item-content>
-						<div class="md-tile-left">月租金</div>
+						<div class="md-tile-left">月租金(￥)</div>
 						<div class="md-tile-content">
-							<md-input-container class="new-money">
-								<label>月租(￥)</label>
-								<input type="number" ng-model="money">
-							</md-input-container>
+							<md-radio-group layout="row" ng-model="moneyRange">
+								<md-radio-button value="1">0~1000</md-radio-button>
+								<md-radio-button value="2">1000~2000</md-radio-button>
+								<md-radio-button value="3">2000~3000</md-radio-button>
+								<md-radio-button value="4">3000以上</md-radio-button>
+							</md-radio-group>
 						</div>
 					</md-item-content>
 				</md-item>
@@ -67,6 +69,7 @@
 					<md-item-content>
 						<div class="md-tile-content new-publish">
 							<md-button class="md-raised md-primary" ng-click="showMore()">更多筛选条件</md-button>
+							<md-button class="md-raised md-warn resetAll" ng-click="reset()">不限所有</md-button>
 						</div>
 					</md-item-content>
 				</md-item>

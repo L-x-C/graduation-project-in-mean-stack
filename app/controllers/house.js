@@ -33,6 +33,12 @@ exports.search = function(req, res) {
 				searchData['address.state'] = obj[key];
 			} else if (key === 'peopleNum') {
 				searchData['peopleNum'] = obj[key];
+			} else if (key === 'houseType') {
+				searchData['houseType'] = obj[key];
+			} else if (key === 'roomType') {
+				searchData['roomType'] = obj[key];
+			} else if (key === 'moneyRange') {
+				searchData['moneyRange'] = obj[key];
 			}
 		}
 	}

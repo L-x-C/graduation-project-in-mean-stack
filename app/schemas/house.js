@@ -14,6 +14,7 @@ var HouseSchema = new mongoose.Schema({
 	bedroom: Number,
 	wc: Number,
 	money: Number,
+	moneyRange: Number,
 	facilities: {
 		necessary: Boolean,
 		tv: Boolean,

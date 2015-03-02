@@ -1,11 +1,5 @@
 angular.module('myApp')
-	.controller('indexCtrl', function($scope, Auth, House, $state, mePageLoading){
-		mePageLoading.show('random');
-	    setTimeout(function(){
-	        mePageLoading.hide();
-	    }, 1000);
-
-
+	.controller('indexCtrl', function($scope, Auth, House, $state){
 		$scope.isLoggedIn = Auth.isLoggedIn();
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {

@@ -1,5 +1,10 @@
 angular.module('myApp')
-	.controller('detailCtrl', function($scope, House, $stateParams) {
+	.controller('detailCtrl', function($scope, House, $stateParams, mePageLoading) {
+		mePageLoading.show('random');
+		setTimeout(function() {
+			mePageLoading.hide();
+		}, 1000);
+
 		House.getDetail($stateParams.id).success(function(res) {
 			$scope.data = res;
 			House.trans($scope.data);
@@ -38,21 +43,61 @@ angular.module('myApp')
 	});
 
 angular.module('myApp')
-	.controller('listCtrl', function($scope, House){
+	.controller('listCtrl', function($scope, House, $stateParams, $state){
+		for (var i in $stateParams) {
+			$scope[i] = $stateParams[i];
+		}
 		$scope.more =false;
 		$scope.showMore = function() {
 			$scope.more = !$scope.more;
 		};
-		House.get().success(function(res) {
+		$scope.reset = function() {
+			for (var i in $stateParams) {
+				$stateParams[i] = '';
+			}
+			$state.go('list', $stateParams);
+		};
+
+		House.search($stateParams).success(function(res) {
 			$scope.houseData = res;
 			angular.forEach($scope.houseData, function(value,key) {
 				House.trans(value);
 			});
+			console.log($stateParams);
+		});
+
+		$scope.$watch('houseType', function(newValue, oldValue) {
+			if (newValue) {
+				$stateParams.houseType = newValue;
+				$state.go('list',$stateParams);
+			}
+		});
+
+		$scope.$watch('roomType', function(newValue, oldValue) {
+			if (newValue) {
+				$stateParams.roomType = newValue;
+				$state.go('list',$stateParams);
+			}
+		});
+
+		$scope.$watch('moneyRange', function(newValue, oldValue) {
+			if (newValue) {
+				$stateParams.moneyRange = newValue;
+				$state.go('list',$stateParams);
+			}
 		});
 	});
 
 angular.module('myApp')
-	.controller('indexCtrl', function($scope, Auth, House){
+	.controller('loginCtrl', function(mePageLoading){
+		mePageLoading.show('random');
+	    setTimeout(function(){
+	        mePageLoading.hide();
+	    }, 1000);
+	});
+
+angular.module('myApp')
+	.controller('indexCtrl', function($scope, Auth, House, $state){
 		$scope.isLoggedIn = Auth.isLoggedIn();
 		$scope.username = Auth.isLoggedIn().name;
 		$scope.logOut = function() {
@@ -69,7 +114,7 @@ angular.module('myApp')
 
 		//search
 		$scope.search = function() {
-			House.search();
+			$state.go('list',{where: $scope.where, peopleNum: $scope.peopleNumber});
 		};
 	});
 
@@ -83,7 +128,11 @@ angular.module('myApp')
 	});
 
 angular.module('myApp')
-	.controller('newCtrl', function($scope, House, Auth, $upload){
+	.controller('newCtrl', function($scope, House, Auth, $upload, mePageLoading){
+		mePageLoading.show('random');
+		setTimeout(function() {
+			mePageLoading.hide();
+		}, 1000);
 		$scope.data = {
 			houseType: 'apartment',
 			roomType: 'all',
@@ -91,8 +140,17 @@ angular.module('myApp')
 		};
 		$scope.publishHouse = function() {
 			if (Auth.isLoggedIn()) {
+				if ($scope.data.money <= 1000) {
+					$scope.data.moneyRange = 1;
+				} else if ($scope.data.money > 1000 && $scope.data.money <= 2000) {
+					$scope.data.moneyRange = 2;
+				} else if ($scope.data.money > 2000 && $scope.data.money <= 3000) {
+					$scope.data.moneyRange = 3;
+				} else {
+					$scope.data.moneyRange = 4;
+				}
+
 				$scope.data.userId = Auth.get();
-				console.log($scope.data);
 				House.publish($scope.data);
 			} else {
 				Auth.needLogin();
@@ -127,6 +185,14 @@ angular.module('myApp')
 	});
 
 angular.module('myApp')
+	.controller('signupCtrl', function(mePageLoading){
+		mePageLoading.show('random');
+	    setTimeout(function(){
+	        mePageLoading.hide();
+	    }, 1000);
+	});
+
+angular.module('myApp')
 	.factory('Auth', function($rootScope, $http, $cookieStore) {
 		$rootScope.currentUser = $cookieStore.get('user') || null;
 
@@ -152,7 +218,7 @@ angular.module('myApp')
 	});
 
 angular.module('myApp')
-	.factory('House', function($http) {
+	.factory('House', function($http, $state) {
 
 		return {
 			publish: function(data) {
@@ -162,22 +228,15 @@ angular.module('myApp')
 				.success(function(res) {
 					if (res === 'suc') {
 						alert("发布成功");
-						window.location.href="/#/list";
+						$state.go('list');
 					}
 				});
-			},
-			get: function() {
-				return $http.get('/getHouse');
 			},
 			getDetail: function(id) {
 				return $http.post('/getHouseDetail', {id: id});
 			},
-			search: function() {
-				$http.post('/search', {
-					city: '上海市'
-				}).success(function(res) {
-					console.log(res);
-				});
+			search: function(info) {
+				return $http.post('/search', info);
 			},
 			trans: function(data) {
 				switch (data.houseType) {

@@ -437,7 +437,7 @@ footer .weibo:hover .icon-weibo:before {
   align-items: center;
 }
 .new md-content {
-  width: 600px;
+  width: 650px;
   overflow: hidden;
 }
 .new md-item-content {
@@ -474,6 +474,9 @@ footer .weibo:hover .icon-weibo:before {
 }
 .new .new-publish button span {
   color: #fff;
+}
+.new .new-publish .resetAll {
+  margin-left: 20px;
 }
 .new .list-header {
   display: flex;

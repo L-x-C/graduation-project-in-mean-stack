@@ -11,8 +11,17 @@ angular.module('myApp')
 		};
 		$scope.publishHouse = function() {
 			if (Auth.isLoggedIn()) {
+				if ($scope.data.money <= 1000) {
+					$scope.data.moneyRange = 1;
+				} else if ($scope.data.money > 1000 && $scope.data.money <= 2000) {
+					$scope.data.moneyRange = 2;
+				} else if ($scope.data.money > 2000 && $scope.data.money <= 3000) {
+					$scope.data.moneyRange = 3;
+				} else {
+					$scope.data.moneyRange = 4;
+				}
+
 				$scope.data.userId = Auth.get();
-				console.log($scope.data);
 				House.publish($scope.data);
 			} else {
 				Auth.needLogin();
