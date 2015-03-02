@@ -1,5 +1,10 @@
 angular.module('myApp')
-	.controller('detailCtrl', function($scope, House, $stateParams) {
+	.controller('detailCtrl', function($scope, House, $stateParams, mePageLoading) {
+		mePageLoading.show('random');
+		setTimeout(function() {
+			mePageLoading.hide();
+		}, 1000);
+
 		House.getDetail($stateParams.id).success(function(res) {
 			$scope.data = res;
 			House.trans($scope.data);

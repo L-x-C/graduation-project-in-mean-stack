@@ -10,6 +10,7 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 		.primaryPalette('grey')
 		.dark();
 
+	mePageLoadingProvider.autoPageLoading = false;
 
 	$urlRouterProvider.when("","/");
 
@@ -17,81 +18,29 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 		.state('/', {
 			url: '/',
 			templateUrl: '/views/partials/main.html',
-			controller: 'indexCtrl',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page0');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			controller: 'indexCtrl'
 		})
 		.state('new', {
 			url: '/rooms/new',
-			templateUrl: '/views/partials/new.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page1');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			templateUrl: '/views/partials/new.html'
 		})
 		.state('signup', {
 			url: '/signup',
 			templateUrl: '/views/partials/signup.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page2');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			controller: 'signupCtrl'
 		})
 		.state('login', {
 			url: '/login',
 			templateUrl: '/views/partials/login.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page3');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			controller: 'loginCtrl'
 		})
 		.state('list', {
-			url: '/list/:state:city:peopleNum:where',
-			templateUrl: '/views/partials/list.html',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page4');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			url: '/list/:state:city:peopleNum:where:houseType',
+			templateUrl: '/views/partials/list.html'
 		})
 		.state('detail', {
 			url: '/detail/:id',
 			templateUrl: '/views/partials/detail.html',
-			controller: 'detailCtrl',
-			resolve: {
-				data: ['$q', function($q) {
-					var defer = $q.defer();
-					setTimeout(function() {
-						defer.resolve('page5');
-					}, 1000);
-					return defer.promise;
-				}]
-			}
+			controller: 'detailCtrl'
 		});
 });

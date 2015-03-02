@@ -8,7 +8,7 @@
 					<md-item-content>
 						<div class="md-tile-left">房源类型</div>
 						<div class="md-tile-content">
-							<md-radio-group layout="row" ng-model="data.houseType">
+							<md-radio-group layout="row" ng-model="houseType">
 								<md-radio-button value="apartment">公寓</md-radio-button>
 								<md-radio-button value="independent">独立屋</md-radio-button>
 							</md-radio-group>
@@ -19,7 +19,7 @@
 					<md-item-content>
 						<div class="md-tile-left">房间类型</div>
 						<div class="md-tile-content">
-							<md-radio-group layout="row" ng-model="data.roomType">
+							<md-radio-group layout="row" ng-model="roomType">
 								<md-radio-button value="all">整套房子</md-radio-button>
 								<md-radio-button value="seperate">独立房间</md-radio-button>
 								<md-radio-button value="share">合住房间</md-radio-button>
@@ -33,7 +33,7 @@
 						<div class="md-tile-content">
 							<md-input-container class="new-money">
 								<label>月租(￥)</label>
-								<input type="number" ng-model="data.money">
+								<input type="number" ng-model="money">
 							</md-input-container>
 						</div>
 					</md-item-content>
@@ -44,9 +44,9 @@
 							<div class="md-tile-left">可住人数</div>
 							<div class="md-tile-content">
 								<div layout="row" layout-margin>
-									<md-slider step="1" flex="80" min="1" max="5" ng-model="data.number" class="md-warn" md-discrete>
+									<md-slider step="1" flex="80" min="1" max="5" ng-model="peopleNumber" class="md-warn" md-discrete>
 									</md-slider>
-									<input flex="20" type="number" ng-model="data.number" class="new-slider">
+									<input flex="20" type="number" ng-model="peopleNumber" class="new-slider">
 								</div>
 							</div>
 						</md-item-content>
@@ -57,7 +57,7 @@
 							<div class="md-tile-content">
 								<md-input-container class="new-money">
 									<label>平方米</label>
-									<input type="number" ng-model="data.area">
+									<input type="number" ng-model="area">
 								</md-input-container>
 							</div>
 						</md-item-content>
@@ -77,7 +77,7 @@
 		<div class="list-container" layout-wrap layout>
 			<md-card ng-repeat="house in houseData.slice().reverse()">
 				<a href="" ui-sref="detail({id: house._id})">
-					<img src="{{house.imgUrl[0]}}">
+					<img ng-src="{{house.imgUrl[0]}}">
 				</a>
 				<md-card-content>
 					<a href="" ui-sref="detail({id: house._id})">{{house.headline}}</a>

@@ -1,5 +1,9 @@
 angular.module('myApp')
-	.controller('newCtrl', function($scope, House, Auth, $upload){
+	.controller('newCtrl', function($scope, House, Auth, $upload, mePageLoading){
+		mePageLoading.show('random');
+		setTimeout(function() {
+			mePageLoading.hide();
+		}, 1000);
 		$scope.data = {
 			houseType: 'apartment',
 			roomType: 'all',
