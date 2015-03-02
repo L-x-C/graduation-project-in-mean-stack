@@ -11,6 +11,7 @@ angular.module('myApp')
 		};
 		$scope.publishHouse = function() {
 			if (Auth.isLoggedIn()) {
+				//moneyRange
 				if ($scope.data.money <= 1000) {
 					$scope.data.moneyRange = 1;
 				} else if ($scope.data.money > 1000 && $scope.data.money <= 2000) {
@@ -19,6 +20,16 @@ angular.module('myApp')
 					$scope.data.moneyRange = 3;
 				} else {
 					$scope.data.moneyRange = 4;
+				}
+				//areaRange
+				if ($scope.data.area <= 50) {
+					$scope.data.areaRange = 1;
+				} else if ($scope.data.area > 50 && $scope.data.area <= 100) {
+					$scope.data.areaRange = 2;
+				} else if ($scope.data.area > 100 && $scope.data.area <= 150) {
+					$scope.data.areaRange = 3;
+				} else {
+					$scope.data.areaRange = 4;
 				}
 
 				$scope.data.userId = Auth.get();

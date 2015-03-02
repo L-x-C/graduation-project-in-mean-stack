@@ -39,6 +39,8 @@ exports.search = function(req, res) {
 				searchData['roomType'] = obj[key];
 			} else if (key === 'moneyRange') {
 				searchData['moneyRange'] = obj[key];
+			} else if (key === 'areaRange') {
+				searchData['areaRange'] = obj[key];
 			}
 		}
 	}

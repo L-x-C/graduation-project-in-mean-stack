@@ -23,34 +23,15 @@ angular.module('myApp')
 			angular.forEach($scope.houseData, function(value,key) {
 				House.trans(value);
 			});
-			console.log($stateParams);
 		});
 
-		$scope.$watch('houseType', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.houseType = newValue;
-				$state.go('list',$stateParams);
-			}
-		});
-
-		$scope.$watch('roomType', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.roomType = newValue;
-				$state.go('list',$stateParams);
-			}
-		});
-
-		$scope.$watch('moneyRange', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.moneyRange = newValue;
-				$state.go('list',$stateParams);
-			}
-		});
-
-		$scope.$watch('peopleNum', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.peopleNum = newValue;
-				$state.go('list',$stateParams);
-			}
+		var watchArr = ['houseType', 'roomType', 'moneyRange', 'peopleNum', 'areaRange'];
+		watchArr.forEach(function(val) {
+			$scope.$watch(val, function(newValue, oldValue) {
+				if (newValue) {
+					$stateParams[val] = newValue;
+					$state.go('list',$stateParams);
+				}
+			});
 		});
 	});

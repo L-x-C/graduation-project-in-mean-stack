@@ -35,7 +35,7 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 			controller: 'loginCtrl'
 		})
 		.state('list', {
-			url: '/list/:state:city:peopleNum:where:houseType:roomType:moneyRange',
+			url: '/list/:state:city:peopleNum:where:houseType:roomType:moneyRange:areaRange',
 			templateUrl: '/views/partials/list.html'
 		})
 		.state('detail', {

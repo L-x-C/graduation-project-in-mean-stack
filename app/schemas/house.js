@@ -11,6 +11,7 @@ var HouseSchema = new mongoose.Schema({
 		road: String
 	},
 	area: Number,
+	areaRange: Number,
 	bedroom: Number,
 	wc: Number,
 	money: Number,
