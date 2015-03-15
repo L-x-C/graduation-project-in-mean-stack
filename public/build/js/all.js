@@ -45,7 +45,11 @@ angular.module('myApp')
 angular.module('myApp')
 	.controller('listCtrl', function($scope, House, $stateParams, $state){
 		for (var i in $stateParams) {
-			$scope[i] = $stateParams[i];
+			if (i === 'peopleNum') {
+				$scope[i] = parseInt($stateParams[i]);
+			} else {
+				$scope[i] = $stateParams[i];
+			}
 		}
 		$scope.more =false;
 		$scope.showMore = function() {
@@ -63,28 +67,16 @@ angular.module('myApp')
 			angular.forEach($scope.houseData, function(value,key) {
 				House.trans(value);
 			});
-			console.log($stateParams);
 		});
 
-		$scope.$watch('houseType', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.houseType = newValue;
-				$state.go('list',$stateParams);
-			}
-		});
-
-		$scope.$watch('roomType', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.roomType = newValue;
-				$state.go('list',$stateParams);
-			}
-		});
-
-		$scope.$watch('moneyRange', function(newValue, oldValue) {
-			if (newValue) {
-				$stateParams.moneyRange = newValue;
-				$state.go('list',$stateParams);
-			}
+		var watchArr = ['houseType', 'roomType', 'moneyRange', 'peopleNum', 'areaRange'];
+		watchArr.forEach(function(val) {
+			$scope.$watch(val, function(newValue, oldValue) {
+				if (newValue) {
+					$stateParams[val] = newValue;
+					$state.go('list',$stateParams);
+				}
+			});
 		});
 	});
 
@@ -140,6 +132,7 @@ angular.module('myApp')
 		};
 		$scope.publishHouse = function() {
 			if (Auth.isLoggedIn()) {
+				//moneyRange
 				if ($scope.data.money <= 1000) {
 					$scope.data.moneyRange = 1;
 				} else if ($scope.data.money > 1000 && $scope.data.money <= 2000) {
@@ -148,6 +141,16 @@ angular.module('myApp')
 					$scope.data.moneyRange = 3;
 				} else {
 					$scope.data.moneyRange = 4;
+				}
+				//areaRange
+				if ($scope.data.area <= 50) {
+					$scope.data.areaRange = 1;
+				} else if ($scope.data.area > 50 && $scope.data.area <= 100) {
+					$scope.data.areaRange = 2;
+				} else if ($scope.data.area > 100 && $scope.data.area <= 150) {
+					$scope.data.areaRange = 3;
+				} else {
+					$scope.data.areaRange = 4;
 				}
 
 				$scope.data.userId = Auth.get();

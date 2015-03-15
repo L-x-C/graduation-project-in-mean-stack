@@ -19,6 +19,9 @@ angular.module('myApp')
 			search: function(info) {
 				return $http.post('/search', info);
 			},
+			getHomeInfo: function(userId) {
+				return $http.post('/getHomeInfo', {id: userId});
+			},
 			trans: function(data) {
 				switch (data.houseType) {
 					case 'apartment':

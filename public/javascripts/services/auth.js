@@ -18,7 +18,9 @@ angular.module('myApp')
 				window.location.href = '/#/signin';
 			},
 			get: function() {
-				return $rootScope.currentUser._id;
+				if ($rootScope.currentUser) {
+					return $rootScope.currentUser._id;
+				}
 			}
 		};
 	});

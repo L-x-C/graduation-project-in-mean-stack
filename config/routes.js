@@ -16,6 +16,7 @@ module.exports = function(app) {
 	app.post('/new', House.publish);
 	app.post('/getHouseDetail', House.getDetail);
 	app.post('/upload/imgs', House.saveImg);
+	app.post('/getHomeInfo', House.getHomeInfo);
 
 	//Search
 	app.post('/search', House.search);

@@ -69,3 +69,9 @@ exports.search = function(req, res) {
 		})
 	}
 };
+exports.getHomeInfo = function (req, res) {
+	var userId = req.body.id;
+	House.find({userId: userId}, function(err, data) {
+		res.send(data);
+	})
+};

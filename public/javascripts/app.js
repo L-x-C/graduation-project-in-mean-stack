@@ -42,5 +42,9 @@ angular.module('myApp', ['ngMaterial', 'ui.router', 'ngCookies', 'angularFileUpl
 			url: '/detail/:id',
 			templateUrl: '/views/partials/detail.html',
 			controller: 'detailCtrl'
+		})
+		.state('home', {
+			url: '/home/:id',
+			templateUrl: '/views/partials/home.html',
 		});
 });
