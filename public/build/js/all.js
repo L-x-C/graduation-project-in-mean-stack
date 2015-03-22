@@ -43,6 +43,16 @@ angular.module('myApp')
 	});
 
 angular.module('myApp')
+	.controller('homeCtrl', function($scope, House, $stateParams, $state){
+		House.getHomeInfo($stateParams.id).success(function(res) {
+			$scope.houseData = res;
+			angular.forEach($scope.houseData, function(value,key) {
+				House.trans(value);
+			});
+		});
+	});
+
+angular.module('myApp')
 	.controller('listCtrl', function($scope, House, $stateParams, $state){
 		for (var i in $stateParams) {
 			if (i === 'peopleNum') {
@@ -114,6 +124,7 @@ angular.module('myApp')
 	.controller('navCtrl', function($scope, Auth){
 		$scope.isLoggedIn = Auth.isLoggedIn();
 		$scope.username = Auth.isLoggedIn().name;
+		$scope.id = Auth.get();
 		$scope.logOut = function() {
 			Auth.logOut();
 		};
@@ -215,7 +226,9 @@ angular.module('myApp')
 				window.location.href = '/#/signin';
 			},
 			get: function() {
-				return $rootScope.currentUser._id;
+				if ($rootScope.currentUser) {
+					return $rootScope.currentUser._id;
+				}
 			}
 		};
 	});
@@ -240,6 +253,9 @@ angular.module('myApp')
 			},
 			search: function(info) {
 				return $http.post('/search', info);
+			},
+			getHomeInfo: function(userId) {
+				return $http.post('/getHomeInfo', {id: userId});
 			},
 			trans: function(data) {
 				switch (data.houseType) {

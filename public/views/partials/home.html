@@ -15,6 +15,7 @@
 					<a href="" ui-sref="detail({id: house._id})">{{house.headline}}</a>
 					<p>{{house.houseType}}</p>
 					<p class="price">￥<span>{{house.money}}</span></p>
+					<house-del></house-del>
 				</md-card-content>
 			</md-card>
 			<h1 ng-show="houseData.length === 0">没有搜索到相关信息~请发布房源~</h1>

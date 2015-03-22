@@ -6,5 +6,12 @@ angular.module('myApp')
 				House.trans(value);
 			});
 		});
-		console.log($stateParams);
+
+		$scope.$on('delThisHouse', function(event,data) {
+			angular.forEach($scope.houseData, function(value,key) {
+				if (value._id === data) {
+					$scope.houseData.splice(key, key + 1);
+				}
+			});
+		})
 	});

@@ -13,7 +13,7 @@ angular.module('myApp')
 		$scope.closeHowToUse = function() {
 			$scope.isShow = false;
 		};
-
+		$scope.id = Auth.get();
 		//search
 		$scope.search = function() {
 			$state.go('list',{where: $scope.where, peopleNum: $scope.peopleNumber});

@@ -535,6 +535,14 @@ footer .weibo:hover .icon-weibo:before {
 .new .list-container .price span {
   color: #fff;
 }
+.new .list-container .md-del {
+  float: right;
+  margin-top: -45px;
+  padding: 7px 15px;
+}
+.new .list-container .md-del span {
+  color: #fff;
+}
 .detail-bg {
   width: 100%;
   height: 700px;
