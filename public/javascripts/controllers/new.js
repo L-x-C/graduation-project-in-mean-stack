@@ -57,8 +57,7 @@ angular.module('myApp')
 						var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
 						$scope.uploadInfo = progressPercentage + '% ';
 					}).success(function(data, status, headers, config) {
-						console.log(data);
-						$scope.data.imgUrl.push(data.file.path.split('\\').slice(1).join('/'));
+						$scope.data.imgUrl.push('houseImgs/'+data.file.name);
 					});
 				}
 			}
