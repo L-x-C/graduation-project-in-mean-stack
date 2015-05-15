@@ -1,6 +1,6 @@
 graduation-project
 ==================
-##To be continued...
+##A Rental Website
 ##Install
  - Clone / Download
  - Change to project's root directory
