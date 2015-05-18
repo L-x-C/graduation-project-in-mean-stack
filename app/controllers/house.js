@@ -71,9 +71,16 @@ exports.search = function(req, res) {
 };
 exports.getHomeInfo = function (req, res) {
 	var userId = req.body.id;
-	House.find({userId: userId}, function(err, data) {
-		res.send(data);
-	});
+	if (userId) {
+		House.find({userId: userId}, function(err, data) {
+			res.send(data);
+		});
+	} else {
+		House.find({}, function(err, data) {
+			res.send(data);
+		});
+	}
+
 };
 exports.delHouse = function(req, res) {
 	var houseId = req.body.houseId;

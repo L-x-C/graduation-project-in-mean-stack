@@ -1,11 +1,23 @@
 angular.module('myApp')
 	.controller('homeCtrl', function($scope, House, $stateParams, $state){
-		House.getHomeInfo($stateParams.id).success(function(res) {
-			$scope.houseData = res;
-			angular.forEach($scope.houseData, function(value,key) {
-				House.trans(value);
+		if ($stateParams.id === '555955cd7f40dd0106d10911') {
+			//管理员
+			House.getHomeInfo().success(function(res) {
+				$scope.houseData = res;
+				angular.forEach($scope.houseData, function(value,key) {
+					House.trans(value);
+				});
 			});
-		});
+		} else {
+			//正常用户
+			House.getHomeInfo($stateParams.id).success(function(res) {
+				$scope.houseData = res;
+				angular.forEach($scope.houseData, function(value,key) {
+					House.trans(value);
+				});
+			});
+		}
+		
 
 		$scope.$on('delThisHouse', function(event,data) {
 			angular.forEach($scope.houseData, function(value,key) {
