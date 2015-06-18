@@ -13,7 +13,7 @@ graduation-project
   - install [mongodb](http://www.mongodb.org/downloads)
   
 ##Run
-- Change to mongodb directory
+- Change to mongodb directory(if windows)
 
 > `mongod -dbpath data`
 
