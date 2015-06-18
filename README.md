@@ -31,6 +31,9 @@ graduation-project
 
 ##Preview
 ![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
-![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
-![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
-![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/b.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/c.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/d.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/e.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/f.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/g.png)
