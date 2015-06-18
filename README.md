@@ -29,3 +29,8 @@ graduation-project
 
 - Open [localhost:3000](localhost:3000)
 
+##Preview
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
+![image](https://github.com/L-x-C/graduation-project/blob/master/preview/a.png)
