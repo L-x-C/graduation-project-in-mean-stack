@@ -25,5 +25,5 @@ angular.module('myApp')
 					$scope.houseData.splice(key, key + 1);
 				}
 			});
-		})
+		});
 	});

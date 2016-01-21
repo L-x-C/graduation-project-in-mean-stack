@@ -15,11 +15,11 @@ gulp.task('build-less', function() {
 		.pipe(gulp.dest('public/build/css'))
 });
 //jshint
-gulp.task('lint', function() {
-	gulp.src('public/javascripts/*/*.js')
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
-});
+//gulp.task('lint', function() {
+//	gulp.src('public/javascripts/*/*.js')
+//		.pipe(jshint())
+//		.pipe(jshint.reporter('default'));
+//});
 // 合并、压缩、重命名css
 gulp.task('stylesheets', ['build-less'], function() {
 	gulp.src(['public/build/css/*.css'])
@@ -56,14 +56,14 @@ gulp.task('clean', function() {
 
 // 定义develop任务在日常开发中使用
 gulp.task('develop', function() {
-	gulp.run('build-less', 'lint', 'javascripts', 'stylesheets');
+	gulp.run('build-less', 'javascripts', 'stylesheets');
 
 	gulp.watch('public/less/*.less', ['build-less']);
 });
 
 // 定义一个prod任务作为发布或者运行时使用
 gulp.task('prod', function() {
-	gulp.run('build-less', 'lint', 'stylesheets', 'javascripts');
+	gulp.run('build-less', 'stylesheets', 'javascripts');
 
 	// 监听.less文件,一旦有变化,立刻调用build-less任务执行
 	gulp.watch('public/less/*.less', ['build-less']);

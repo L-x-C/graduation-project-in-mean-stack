@@ -21,7 +21,7 @@ angular.module('myApp')
 						$scope.$emit('delThisHouse', houseId);
 					});
 					
-				}
+				};
 			}
 		};
 	});
